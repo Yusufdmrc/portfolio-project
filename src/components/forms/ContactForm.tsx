@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
-import { supabase } from "@/lib/supabase/client";
+import { saveContactMessage } from "@/lib/supabase/queries";
 import { ContactFormData } from "@/types";
 import { CheckCircle, AlertCircle, Send, Loader2 } from "lucide-react";
 
@@ -26,16 +26,14 @@ export default function ContactForm() {
     setSubmitStatus("idle");
 
     try {
-      const { error } = await supabase.from("contact_messages").insert([
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-      ]);
+      const result = await saveContactMessage({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      });
 
-      if (error) {
-        throw error;
+      if (!result.success) {
+        throw new Error(result.error);
       }
 
       setSubmitStatus("success");

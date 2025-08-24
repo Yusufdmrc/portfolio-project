@@ -8,26 +8,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: "E-posta",
-    value: "yusuf@example.com",
-    href: "mailto:yusuf@example.com",
+    value: "yusuffdemirci10@gmail.com",
+    href: "mailto:yusuffdemirci10@gmail.com",
   },
   {
     icon: Phone,
     label: "Telefon",
-    value: "+90 555 123 45 67",
-    href: "tel:+905551234567",
+    value: "+90 543 418 40 52",
+    href: "tel:+905434184052",
   },
   {
     icon: MapPin,
     label: "Konum",
     value: "İstanbul, Türkiye",
     href: "https://maps.google.com/?q=Istanbul,Turkey",
-  },
-  {
-    icon: Clock,
-    label: "Çalışma Saatleri",
-    value: "Pzt-Cum 09:00-18:00",
-    href: null,
   },
 ];
 
@@ -141,7 +135,7 @@ export default function ContactPage() {
                   E-posta Gönder
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com/in/yusuf-demirci"
+                  href="https://www.linkedin.com/in/yusuf-demirci-9846141bb/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"

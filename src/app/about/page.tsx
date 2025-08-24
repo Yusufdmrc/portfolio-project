@@ -18,21 +18,16 @@ const skills = [
   },
   {
     category: "Backend",
-    items: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "PostgreSQL",
-      "REST API",
-      "GraphQL",
-    ],
+    items: ["Node.js", "Express.js", "MongoDB", "REST API"],
   },
   {
     category: "Test & QA",
     items: [
-      "Cypress",
-      "Jest",
       "Selenium",
+      "Java",
+      "TestNG",
+      "Cucumber",
+      "Appium",
       "Test Automation",
       "Manual Testing",
       "API Testing",
@@ -40,31 +35,30 @@ const skills = [
   },
   {
     category: "Tools",
-    items: ["Git", "Docker", "AWS", "Postman", "JIRA", "VS Code"],
+    items: ["Git", "Docker", "Jenkins", "Postman", "JIRA", "JMeter"],
   },
 ];
 
 const experiences = [
   {
-    title: "Software Test Engineer",
-    company: "Tech Company",
-    period: "2022 - Present",
-    description:
-      "Test automation framework geliştirme, API testleri, end-to-end testing",
+    title: "QA Tester",
+    company: "Sisal Hub Türkiye",
+    period: "Eylül 2024 - Devam Ediyor",
+    description: "Otomasyon ve manuel test,Fonksiyonel Test ",
     icon: TestTube,
   },
   {
-    title: "Full-Stack Developer",
-    company: "Development Agency",
-    period: "2021 - 2022",
+    title: "Frontend Developer",
+    company: "Arute Solutions",
+    period: "Aralık 2023 - Ağustos 2024",
     description:
       "React, Node.js ile web uygulaması geliştirme, veritabanı yönetimi",
     icon: Code,
   },
   {
-    title: "Junior Developer",
-    company: "Software Startup",
-    period: "2020 - 2021",
+    title: "Frontend Developer Intern",
+    company: "Arute Solutions",
+    period: "Kasım 2023 - Aralık 2023",
     description:
       "Frontend geliştirme, kullanıcı arayüzü tasarımı, responsive tasarım",
     icon: Laptop,
@@ -164,20 +158,34 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                Yazılım geliştirme dünyasına olan ilgim üniversite yıllarımda
-                başladı. İlk projelerimden bugüne kadar, kaliteli kod yazmanın
-                ve titiz test süreçlerinin önemini kavrayarak bu alanda
-                uzmanlaştım.
+                Test yaşam döngüsünün tüm aşamalarında aktif rol alan, test
+                senaryoları tasarlayan ve web ile mobil (iOS ve Android)
+                uygulamalarda kapsamlı manuel ve otomasyon testleri
+                gerçekleştiren bir yazılım test mühendisiyim.
               </p>
               <p>
-                Test otomasyonu konusundaki uzmanlığımı, full-stack geliştirme
-                becerileriyle birleştirerek, hem teknik hem de fonksiyonel
-                açıdan mükemmel ürünler ortaya çıkarmaya odaklandım.
+                Üniversite dönemimde frontend developer olarak çalıştım. Bu
+                tecrübe, kullanıcı arayüzü davranışlarını daha iyi analiz etmemi
+                ve geliştiricilerle etkili iş birliği kurmamı sağladı. Böylece
+                hem teknik kalite hem de kullanıcı deneyimi açısından güçlü
+                çözümler üretebiliyorum.
               </p>
               <p>
-                Sürekli öğrenmeye ve kendimi geliştirmeye olan tutkum,
-                teknolojideki yenilikleri yakından takip etmeme ve projelerimde
-                modern çözümler kullanmama olanak sağlıyor.
+                Sıfırdan eksiksiz web uygulamaları, mobil uygulamalar ve
+                otomasyon çözümleri tasarlama ve geliştirme yeteneğine sahibim.
+                Geliştirme uzmanlığımı QA deneyimimle birleştirerek, React,
+                React Native, Next.js ve diğer çerçeveler dahil olmak üzere hem
+                web hem de mobil platformlar için duyarlı, kullanıcı dostu ve
+                performans açısından optimize edilmiş uygulamalar oluşturuyorum.
+              </p>
+              <p>
+                Otomasyon tarafında, özel test otomasyon çerçeveleri tasarlıyor
+                ve uyguluyorum, bunları CI/CD boru hatlarına entegre ediyor ve
+                iş hedefleri ve kalite standartlarıyla uyumlu hale getiriyorum.
+                Gereksinimlerin toplanmasından geliştirmeye, titiz testlerden
+                dağıtımına kadar tüm yazılım geliştirme yaşam döngüsü boyunca
+                çalışabilme becerim, hem işlevsel hem de güvenilir uçtan uca
+                çözümler sunmamı sağlıyor.
               </p>
             </div>
           </motion.div>
