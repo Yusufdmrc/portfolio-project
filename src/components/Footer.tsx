@@ -20,18 +20,8 @@ const socialLinks = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/yusuf-demirci",
+    href: "https://www.linkedin.com/in/yusuf-demirci-9846141bb/",
     icon: Linkedin,
-  },
-  {
-    name: "Twitter",
-    href: "https://twitter.com/your-handle",
-    icon: Twitter,
-  },
-  {
-    name: "Instagram",
-    href: "https://instagram.com/your-handle",
-    icon: Instagram,
   },
 ];
 
@@ -50,7 +40,10 @@ const footerLinks = [
     links: [
       { name: "İletişim", href: "/contact" },
       { name: "GitHub", href: "https://github.com/Yusufdmrc" },
-      { name: "LinkedIn", href: "https://linkedin.com/in/yusuf-demirci" },
+      {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/in/yusuf-demirci-9846141bb/",
+      },
     ],
   },
 ];
@@ -175,16 +168,6 @@ export default function Footer() {
               <p className="text-sm text-gray-400 flex items-center">
                 &copy; {new Date().getFullYear()} Yusuf Demirci. Tüm hakları
                 saklıdır.
-                <span className="mx-2">•</span>
-                Made with{" "}
-                <Heart
-                  className="h-4 w-4 text-red-400 mx-1"
-                  fill="currentColor"
-                />{" "}
-                in Turkey
-              </p>
-              <p className="text-sm text-gray-400 mt-2 md:mt-0">
-                Next.js & Tailwind CSS ile geliştirildi
               </p>
             </div>
           </motion.div>

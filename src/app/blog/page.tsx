@@ -3,111 +3,137 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/Button";
-import {
-  Calendar,
-  Clock,
-  ArrowRight,
-  BookOpen,
-  Code,
-  TestTube,
-} from "lucide-react";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const blogPosts = [
   {
     id: 1,
-    title: "Modern Test Automation: Cypress ile E2E Testing",
+    title: "Next.js ile Full-Stack Web Projesi Oluşturma Yol Haritası",
     excerpt:
-      "End-to-end testing süreçlerini optimize etmek için Cypress framework'ünün gücünden nasıl yararlanabiliriz? Bu yazıda modern test yaklaşımlarını ele alıyoruz.",
-    content:
-      "Test automation dünyasında Cypress, developer-friendly yaklaşımı ile öne çıkıyor...",
+      "Sıfırdan Next.js ile modern full-stack web uygulaması geliştirme sürecinin detaylı rehberi. Database entegrasyonu, authentication, deployment ve best practices.",
+    content: `Next.js, React tabanlı full-stack web uygulamaları geliştirmek için en popüler framework'lerden biri haline geldi. Bu rehberde, sıfırdan bir proje oluşturma sürecini adım adım ele alacağız.
+
+## Proje Kurulumu
+Next.js projesi oluşturmak için öncelikle aşağıdaki komutu kullanıyoruz:
+\`\`\`bash
+npx create-next-app@latest my-project --typescript --tailwind --eslint
+\`\`\`
+
+## Database Entegrasyonu
+Modern web uygulamaları için veritabanı entegrasyonu kritik önemde. Prisma ORM ile PostgreSQL kullanarak type-safe database işlemleri gerçekleştiriyoruz.
+
+## Authentication Sistemi
+NextAuth.js ile güvenli authentication sistemi kuruyoruz. Google, GitHub gibi OAuth providers ile sosyal medya girişi sağlıyoruz.
+
+## Deployment Süreci
+Vercel platformu ile hızlı ve güvenilir deployment işlemi gerçekleştiriyoruz.`,
     author: "Yusuf Demirci",
-    publishedAt: "2024-01-15",
-    readingTime: "8 min",
-    category: "Test Automation",
-    tags: ["Cypress", "Testing", "Automation", "E2E"],
-    image: "/images/blog-1.jpg",
+    publishedAt: "2024-08-25",
+    readingTime: "15 min",
+    category: "Web Development",
+    tags: ["Next.js", "Full-Stack", "React", "TypeScript", "Prisma"],
+    image:
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
+    slug: "nextjs-fullstack-yol-haritasi",
   },
   {
     id: 2,
-    title: "Next.js 14 ile Full-Stack Development",
+    title: "Test Otomasyon Projelerindeki CI/CD Süreçleri",
     excerpt:
-      "Next.js 14'ün yeni özellikleri ile modern web uygulamaları geliştirirken nelere dikkat etmeliyiz? Server Components, App Router ve daha fazlası.",
-    content:
-      "Next.js 14 ile birlikte gelen yenilikler web development dünyasını dönüştürüyor...",
+      "Modern test otomasyon projelerinde sürekli entegrasyon ve sürekli dağıtım süreçlerinin nasıl kurulacağı. GitHub Actions, Jenkins ve Azure DevOps örnekleri.",
+    content: `Test otomasyonu projelerinde CI/CD süreçleri, kaliteli yazılım teslimatının temelidir. Bu yazıda, test otomasyonunu CI/CD pipeline'larına entegre etme yöntemlerini inceleyeceğiz.
+
+## GitHub Actions ile CI/CD
+GitHub Actions, test otomasyonu için mükemmel bir platform sunar. Workflow dosyaları ile otomatik test çalıştırma süreçlerini yönetebiliriz.
+
+## Jenkins Entegrasyonu
+Jenkins ile test automation framework'ümüzü entegre ederek, scheduled test runs ve parametreli test çalıştırma işlemlerini gerçekleştirebiliriz.
+
+## Test Raporlama
+Allure, ExtentReports gibi araçlarla detaylı test raporları oluşturup, CI/CD süreçlerine entegre ediyoruz.
+
+## Paralel Test Çalıştırma
+Test Suite'lerin paralel çalıştırılması ile test süresini önemli ölçüde azaltabiliriz.`,
     author: "Yusuf Demirci",
-    publishedAt: "2024-01-08",
+    publishedAt: "2024-08-20",
     readingTime: "12 min",
-    category: "Web Development",
-    tags: ["Next.js", "React", "Full-Stack", "TypeScript"],
-    image: "/images/blog-2.jpg",
+    category: "Test Automation",
+    tags: ["CI/CD", "Testing", "GitHub Actions", "Jenkins", "Automation"],
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    slug: "test-otomasyon-cicd-surecleri",
   },
   {
     id: 3,
-    title: "API Testing Best Practices",
+    title: "TypeScript ile Tip Güvenli Kod Yazımı",
     excerpt:
-      "RESTful API'lerin test edilmesinde kullanabileceğimiz en etkili yöntemler ve araçlar. Postman, Jest ve Supertest ile comprehensive testing.",
-    content:
-      "API testing, modern web uygulamalarının güvenilirliği için kritik öneme sahip...",
+      "JavaScript'in tip güvenliği olmayan yapısını TypeScript ile nasıl güçlendirebiliriz? Advanced types, generics, utility types ve best practices.",
+    content: `TypeScript, JavaScript'e static typing ekleyerek daha güvenilir ve maintainable kod yazmamızı sağlıyor. Bu yazıda TypeScript'in advanced özelliklerini inceleyeceğiz.
+
+## Type System Temelleri
+TypeScript'in type system'inin temel prensipleri ve primitive type'lar.
+
+## Interface vs Type
+Interface ve Type arasındaki farklar ve hangi durumda hangisini kullanacağımız.
+
+## Generic Types
+Generic type'lar ile reusable ve type-safe fonksiyonlar yazma.
+
+## Utility Types
+TypeScript'in built-in utility type'ları: Partial, Pick, Omit, Record ve diğerleri.
+
+## Advanced Type Patterns
+Conditional types, mapped types ve template literal types ile complex type operations.`,
     author: "Yusuf Demirci",
-    publishedAt: "2024-01-01",
-    readingTime: "10 min",
-    category: "API Testing",
-    tags: ["API", "Testing", "Postman", "Jest"],
-    image: "/images/blog-3.jpg",
+    publishedAt: "2024-08-15",
+    readingTime: "18 min",
+    category: "Programming",
+    tags: ["TypeScript", "JavaScript", "Types", "Programming", "Development"],
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+    slug: "typescript-tip-guvenli-kod",
   },
   {
     id: 4,
-    title: "TypeScript ile Tip Güvenli Kod Yazımı",
-    excerpt:
-      "JavaScript'in tip güvenliği olmayan yapısını TypeScript ile nasıl güçlendirebiliriz? Advanced types, generics ve best practices.",
-    content:
-      "TypeScript, JavaScript'e static typing ekleyerek daha güvenilir kod yazmamızı sağlıyor...",
-    author: "Yusuf Demirci",
-    publishedAt: "2023-12-25",
-    readingTime: "15 min",
-    category: "Programming",
-    tags: ["TypeScript", "JavaScript", "Types", "Programming"],
-    image: "/images/blog-4.jpg",
-  },
-  {
-    id: 5,
     title: "React Performance Optimization",
     excerpt:
-      "React uygulamalarında performans optimizasyonu için kullanabileceğimiz teknikler. Memoization, lazy loading, code splitting ve daha fazlası.",
-    content:
-      "React uygulamalarının performansını artırmak için çeşitli teknikler kullanabiliriz...",
+      "React uygulamalarında performans optimizasyonu için kullanabileceğimiz teknikler. Memoization, lazy loading, code splitting, virtual scrolling ve daha fazlası.",
+    content: `React uygulamalarının performansını artırmak için çeşitli teknikler kullanabiliriz. Bu yazıda, production-ready React uygulamaları için kritik optimizasyon yöntemlerini ele alacağız.
+
+## React.memo ve useMemo
+Component re-rendering'ini optimize etmek için React.memo ve useMemo hook'larının doğru kullanımı.
+
+## Code Splitting
+React.lazy ve Suspense ile dynamic import'lar kullanarak bundle size'ı optimize etme.
+
+## Virtual Scrolling
+Büyük listeler için virtual scrolling teknikleri ve react-window kullanımı.
+
+## Image Optimization
+Next.js Image component'i ile lazy loading ve responsive image'lar.
+
+## Bundle Analysis
+Webpack Bundle Analyzer ile bundle size analizi ve optimization stratejileri.`,
     author: "Yusuf Demirci",
-    publishedAt: "2023-12-18",
-    readingTime: "11 min",
+    publishedAt: "2024-08-10",
+    readingTime: "14 min",
     category: "React",
-    tags: ["React", "Performance", "Optimization", "Frontend"],
-    image: "/images/blog-5.jpg",
-  },
-  {
-    id: 6,
-    title: "Agile Testing Methodologies",
-    excerpt:
-      "Agile development süreçlerinde testing'in rolü ve etkili test stratejileri. Scrum, Kanban ve DevOps süreçlerinde QA integration.",
-    content:
-      "Agile metodolojilerde testing süreci development lifecycle'ın ayrılmaz bir parçası...",
-    author: "Yusuf Demirci",
-    publishedAt: "2023-12-10",
-    readingTime: "9 min",
-    category: "Methodology",
-    tags: ["Agile", "Testing", "Scrum", "DevOps"],
-    image: "/images/blog-6.jpg",
+    tags: ["React", "Performance", "Optimization", "Frontend", "JavaScript"],
+    image:
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80",
+    slug: "react-performance-optimization",
   },
 ];
 
 const categories = [
   "All",
-  "Test Automation",
   "Web Development",
-  "API Testing",
+  "Test Automation",
   "Programming",
   "React",
-  "Methodology",
+  "API Testing",
 ];
 
 export default function BlogPage() {
@@ -124,18 +150,6 @@ export default function BlogPage() {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case "Test Automation":
-        return <TestTube className="w-4 h-4" />;
-      case "Web Development":
-      case "React":
-        return <Code className="w-4 h-4" />;
-      default:
-        return <BookOpen className="w-4 h-4" />;
-    }
   };
 
   return (
@@ -185,7 +199,13 @@ export default function BlogPage() {
             className="mb-16"
           >
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white">
-              <div className="absolute inset-0 bg-black/20" />
+              <Image
+                src={blogPosts[0].image}
+                alt={blogPosts[0].title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-indigo-600/90" />
               <div className="relative z-10 max-w-4xl">
                 <Badge
                   variant="secondary"
@@ -211,7 +231,7 @@ export default function BlogPage() {
                     {blogPosts[0].readingTime}
                   </div>
                 </div>
-                <Link href={`/blog/${blogPosts[0].id}`}>
+                <Link href={`/blog/${blogPosts[0].slug}`}>
                   <Button variant="secondary" size="lg" className="group">
                     Yazıyı Oku
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -236,12 +256,15 @@ export default function BlogPage() {
               whileHover={{ y: -5 }}
               className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
-              {/* Post Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {getCategoryIcon(post.category)}
-                </div>
+              {/* Post Image */}
+              <div className="h-48 relative overflow-hidden">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute top-4 left-4">
                   <Badge variant="secondary" className="text-xs">
                     {post.category}
@@ -283,7 +306,7 @@ export default function BlogPage() {
                   )}
                 </div>
 
-                <Link href={`/blog/${post.id}`}>
+                <Link href={`/blog/${post.slug}`}>
                   <Button
                     variant="ghost"
                     size="sm"
@@ -296,33 +319,6 @@ export default function BlogPage() {
               </div>
             </motion.article>
           ))}
-        </motion.div>
-
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-3xl p-8 text-center border border-blue-200/50 dark:border-blue-800/50">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Yeni Yazılardan Haberdar Olun
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Blog yazılarımı e-posta ile takip etmek ister misiniz? Yeni
-              içeriklerden ilk siz haberdar olun.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="E-posta adresiniz"
-                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <Button className="whitespace-nowrap">Abone Ol</Button>
-            </div>
-          </div>
         </motion.div>
       </div>
     </div>

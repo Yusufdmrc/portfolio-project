@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/Button";
 import { Github, ExternalLink, Star, GitFork } from "lucide-react";
@@ -9,87 +10,75 @@ import Link from "next/link";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Test Automation",
+    title: "Huminex Website",
     description:
-      "Kapsamlı e-ticaret platformu için geliştirilmiş Cypress tabanlı test otomasyon framework'ü. API testleri, UI testleri ve performans testlerini içerir.",
+      "Huminex firması için geliştirilmiş modern kurumsal web sitesi. Next.js 14, TypeScript ve Tailwind CSS kullanılarak responsive tasarım ilkeleriyle oluşturulmuş. SEO optimizasyonu, çok dilli destek ve performans odaklı yapı ile kullanıcı deneyimi ön planda tutulmuş.",
     image: "/images/project-1.jpg",
-    technologies: ["Cypress", "TypeScript", "JavaScript", "Node.js", "MongoDB"],
-    github: "https://github.com/Yusufdmrc/ecommerce-test",
-    demo: "https://demo-ecommerce-test.vercel.app",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Vercel"],
+    demo: "https://website-g69i.vercel.app/tr",
     stars: 24,
     forks: 8,
-    category: "Test Automation",
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description:
-      "React ve Node.js kullanılarak geliştirilen modern görev yönetimi uygulaması. Real-time güncellemeler, drag & drop özelliği ve responsive tasarım.",
-    image: "/images/project-2.jpg",
-    technologies: [
-      "React",
-      "Node.js",
-      "PostgreSQL",
-      "Socket.io",
-      "Tailwind CSS",
-    ],
-    github: "https://github.com/Yusufdmrc/task-manager",
-    demo: "https://task-manager-demo.vercel.app",
-    stars: 18,
-    forks: 5,
     category: "Full Stack",
   },
   {
-    id: 3,
-    title: "API Testing Framework",
+    id: 2,
+    title: "Selenium Cucumber Test Automation",
     description:
-      "RESTful API'ler için comprehensive testing framework. Otomatik raporlama, data validation ve CI/CD entegrasyonu ile.",
+      "Web uygulamaları için kapsamlı test otomasyon framework'ü. Page Object Model (POM) tasarım deseni, Cucumber BDD yaklaşımı ve TestNG test yönetimi ile geliştirilmiş. Cross-browser testing, paralel test çalıştırma ve detaylı raporlama özellikleri içermektedir.",
+    image: "/images/project-2.jpg",
+    technologies: ["Selenium", "Java", "TestNG", "Cucumber", "Maven"],
+    github: "https://github.com/Yusufdmrc/selenium-project",
+    stars: 18,
+    forks: 5,
+    category: "Test Automation",
+  },
+  {
+    id: 3,
+    title: "Appium Cucumber Test Automation",
+    description:
+      "Android ve iOS mobil uygulamaları için geliştirilmiş test otomasyon çerçevesi. Appium WebDriver, Cucumber BDD ve TestNG kullanarak cross-platform mobil test otomasyonu sağlar. Real device ve emulator desteği ile kapsamlı mobil test senaryoları içerir.",
     image: "/images/project-3.jpg",
-    technologies: ["Jest", "Supertest", "Node.js", "Express.js", "Docker"],
-    github: "https://github.com/Yusufdmrc/api-testing",
-    demo: "https://api-testing-demo.com",
+    technologies: ["Appium", "Java", "TestNG", "Cucumber", "Maven"],
+    github: "https://github.com/Yusufdmrc/appium-project",
     stars: 31,
     forks: 12,
-    category: "API Testing",
-  },
-  {
-    id: 4,
-    title: "Portfolio Website",
-    description:
-      "Next.js ve Tailwind CSS ile geliştirilmiş modern portfolio website. Dark mode, animasyonlar ve responsive tasarım.",
-    image: "/images/project-4.jpg",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/Yusufdmrc/portfolio",
-    demo: "https://yusufdemirci.dev",
-    stars: 15,
-    forks: 3,
-    category: "Frontend",
-  },
-  {
-    id: 5,
-    title: "Mobile App Testing Suite",
-    description:
-      "React Native uygulamaları için kapsamlı test suite. Unit testler, integration testler ve e2e testler içerir.",
-    image: "/images/project-5.jpg",
-    technologies: ["React Native", "Detox", "Jest", "Appium", "TypeScript"],
-    github: "https://github.com/Yusufdmrc/mobile-testing",
-    demo: "https://mobile-testing-demo.com",
-    stars: 22,
-    forks: 7,
     category: "Mobile Testing",
   },
   {
-    id: 6,
-    title: "Data Visualization Dashboard",
+    id: 4,
+    title: "Postman API Test Project",
     description:
-      "D3.js ve React kullanılarak geliştirilmiş interaktif veri görselleştirme dashboard'u. Real-time data processing.",
+      "RESTful API'ler için kapsamlı test otomasyon suite'i. Postman Collections, Newman CLI runner ve GitHub Actions CI/CD entegrasyonu ile otomatik API testi. Request/Response validation, schema validation, environment management ve detaylı test raporlama sistemi.",
+    image: "/images/project-4.jpg",
+    technologies: ["Postman", "Newman", "RESTful API", "GitHub Actions"],
+    github: "https://github.com/Yusufdmrc/postman-api-project",
+    stars: 15,
+    forks: 3,
+    category: "API Testing",
+  },
+  {
+    id: 5,
+    title: "Blog App",
+    description:
+      "Modern ve kullanıcı dostu blog platformu. Next.js 13 App Router, NextAuth.js ile Google/GitHub authentication, MongoDB Atlas veritabanı entegrasyonu. Rich text editor, kategori sistemi, yorum özelliği ve responsive tasarım ile complete blog çözümü.",
+    image: "/images/project-5.jpg",
+    technologies: ["Next.js", "React", "NextAuth.js", "MongoDB", "TypeScript"],
+    github: "https://github.com/Yusufdmrc/nextjs-blog-app",
+    stars: 22,
+    forks: 7,
+    category: "Full Stack",
+  },
+  {
+    id: 6,
+    title: "E-Commerce Project",
+    description:
+      "Full-stack e-ticaret platformu. Next.js 14, Prisma ORM ile PostgreSQL veritabanı, Stripe payment integration, NextAuth.js authentication sistemi. Ürün yönetimi, sepet işlemleri, sipariş takibi, admin panel ve güvenli ödeme sistemi içeren complete e-commerce solution.",
     image: "/images/project-6.jpg",
-    technologies: ["React", "D3.js", "Node.js", "MongoDB", "WebSocket"],
-    github: "https://github.com/Yusufdmrc/data-viz",
-    demo: "https://data-viz-demo.vercel.app",
+    technologies: ["Next.js", "Prisma", "Stripe", "NextAuth.js", "TypeScript"],
+    github: "https://github.com/Yusufdmrc/next.js-e-commerce",
     stars: 27,
     forks: 9,
-    category: "Data Visualization",
+    category: "Full Stack",
   },
 ];
 
@@ -98,12 +87,18 @@ const categories = [
   "Test Automation",
   "Full Stack",
   "API Testing",
-  "Frontend",
   "Mobile Testing",
-  "Data Visualization",
 ];
 
 export default function ProjectsPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  // Filtrelenmiş projeleri hesapla
+  const filteredProjects = projects.filter(
+    (project) =>
+      selectedCategory === "All" || project.category === selectedCategory
+  );
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -144,18 +139,33 @@ export default function ProjectsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
+          className="flex flex-wrap justify-center gap-2 mb-8"
         >
           {categories.map((category) => (
             <Button
               key={category}
-              variant={category === "All" ? "primary" : "outline"}
+              variant={category === selectedCategory ? "primary" : "outline"}
               size="sm"
-              className="mb-2"
+              className="mb-2 transition-all duration-200 hover:scale-105"
+              onClick={() => setSelectedCategory(category)}
             >
               {category}
             </Button>
           ))}
+        </motion.div>
+
+        {/* Project Count */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="text-center mb-8"
+        >
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            {selectedCategory === "All"
+              ? `Toplam ${filteredProjects.length} proje`
+              : `${selectedCategory} kategorisinde ${filteredProjects.length} proje`}
+          </p>
         </motion.div>
 
         {/* Projects Grid */}
@@ -163,9 +173,10 @@ export default function ProjectsPage() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
+          key={selectedCategory} // Key eklendi animasyon için
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
@@ -225,30 +236,36 @@ export default function ProjectsPage() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button size="sm" className="flex-1 group/btn">
-                      <Github className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
-                      Code
-                    </Button>
-                  </Link>
-                  <Link
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="flex-1 group/btn"
+                  {project.github && (
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
                     >
-                      <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:translate-x-1 transition-transform" />
-                      Demo
-                    </Button>
-                  </Link>
+                      <Button size="sm" className="w-full group/btn">
+                        <Github className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
+                        Code
+                      </Button>
+                    </Link>
+                  )}
+                  {project.demo && (
+                    <Link
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full group/btn"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:translate-x-1 transition-transform" />
+                        Demo
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>

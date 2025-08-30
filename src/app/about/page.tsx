@@ -22,16 +22,7 @@ const skills = [
   },
   {
     category: "Test & QA",
-    items: [
-      "Selenium",
-      "Java",
-      "TestNG",
-      "Cucumber",
-      "Appium",
-      "Test Automation",
-      "Manual Testing",
-      "API Testing",
-    ],
+    items: ["Selenium", "Java", "TestNG", "Cucumber", "Appium", "Maven"],
   },
   {
     category: "Tools",
@@ -44,23 +35,22 @@ const experiences = [
     title: "QA Tester",
     company: "Sisal Hub Türkiye",
     period: "Eylül 2024 - Devam Ediyor",
-    description: "Otomasyon ve manuel test,Fonksiyonel Test ",
+    description:
+      "Java, Selenium, Appium, Jenkins, Postman, BrowserStack, CharlesProxy ",
     icon: TestTube,
   },
   {
     title: "Frontend Developer",
     company: "Arute Solutions",
     period: "Aralık 2023 - Ağustos 2024",
-    description:
-      "React, Node.js ile web uygulaması geliştirme, veritabanı yönetimi",
+    description: "React, TypeScript, Tailwind CSS, React Native, Jira",
     icon: Code,
   },
   {
     title: "Frontend Developer Intern",
     company: "Arute Solutions",
     period: "Kasım 2023 - Aralık 2023",
-    description:
-      "Frontend geliştirme, kullanıcı arayüzü tasarımı, responsive tasarım",
+    description: "React, JavaScript, HTML, CSS, Bootstrap",
     icon: Laptop,
   },
 ];
@@ -109,9 +99,9 @@ export default function AboutPage() {
             variants={itemVariants}
             className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
           >
-            Merhaba! Ben Yusuf Demirci, yazılım test mühendisi ve full-stack
-            developer. Teknolojiye olan tutkum ve sürekli öğrenme isteğimle,
-            kaliteli yazılım çözümleri geliştiriyorum.
+            Merhaba! Ben Yusuf, yazılım test mühendisi ve frontend developer
+            tecrübem bulunmakta. Teknolojiye olan tutkum ve sürekli öğrenme
+            isteğimle, kaliteli yazılım çözümleri geliştiriyorum.
           </motion.p>
         </motion.div>
 
@@ -180,8 +170,8 @@ export default function AboutPage() {
               </p>
               <p>
                 Otomasyon tarafında, özel test otomasyon çerçeveleri tasarlıyor
-                ve uyguluyorum, bunları CI/CD boru hatlarına entegre ediyor ve
-                iş hedefleri ve kalite standartlarıyla uyumlu hale getiriyorum.
+                ve uyguluyorum, bunları CI/CD süreçlerine entegre ediyor ve iş
+                hedefleri ve kalite standartlarıyla uyumlu hale getiriyorum.
                 Gereksinimlerin toplanmasından geliştirmeye, titiz testlerden
                 dağıtımına kadar tüm yazılım geliştirme yaşam döngüsü boyunca
                 çalışabilme becerim, hem işlevsel hem de güvenilir uçtan uca

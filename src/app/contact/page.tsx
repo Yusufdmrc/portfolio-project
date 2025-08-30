@@ -126,7 +126,7 @@ export default function ContactPage() {
               </h3>
               <div className="flex space-x-4">
                 <motion.a
-                  href="mailto:yusuf@example.com"
+                  href="mailto:yusuffdemirci10@gmail.com"
                   className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

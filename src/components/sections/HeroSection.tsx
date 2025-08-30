@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { Badge } from "@/components/ui/badge";
 
@@ -9,14 +11,16 @@ const skills = [
   "React",
   "Next.js",
   "TypeScript",
-  "Node.js",
+  "Java",
   "Selenium",
-  "Cypress",
-  "Jest",
+  "Appium",
+  "Jenkins",
   "Git",
 ];
 
 export default function HeroSection() {
+  const router = useRouter();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -33,14 +37,31 @@ export default function HeroSection() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/YusufDemirci_CV.pdf";
+    link.download = "YusufDemirci_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleNavigateToProjects = () => {
+    router.push("/projects");
+  };
+
   const socialLinks = [
-    { icon: Github, href: "https://github.com/yusufdemirci", label: "GitHub" },
+    {
+      icon: Github,
+      href: "https://github.com/Yusufdmrc",
+      label: "GitHub",
+    },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yusufdemirci",
+      href: "https://www.linkedin.com/in/yusuf-demirci-9846141bb/",
       label: "LinkedIn",
     },
-    { icon: Mail, href: "mailto:hello@yusufdemirci.dev", label: "Email" },
+    { icon: Mail, href: "mailto:yusuffdemirci10@gmail.com", label: "Email" },
   ];
 
   return (
@@ -92,19 +113,13 @@ export default function HeroSection() {
               </motion.div>
 
               <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                <span className="block">Software Test</span>
-                <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Engineer
-                </span>
-                <span className="block text-3xl sm:text-5xl">
-                  & Full-Stack Developer
-                </span>
+                <span className="block">Yazılım Mühendisi </span>
               </h1>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                Test otomasyonu, web geliştirme ve yazılım kalitesi konularında
-                uzmanlaşmış yazılım mühendisi. Modern teknolojilerle kaliteli
-                çözümler üretiyorum.
+                Otomasyon, web geliştirme ve yazılım kalitesi konularında
+                tecrübeli yazılım mühendisi olarak modern teknolojilerle
+                kaliteli çözümler üretiyorum.
               </p>
             </motion.div>
 
@@ -140,6 +155,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8"
+                onClick={handleNavigateToProjects}
               >
                 Projelerimi İncele
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -148,6 +164,7 @@ export default function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="group border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={handleDownloadCV}
               >
                 <Download className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
                 CV İndir
@@ -186,32 +203,34 @@ export default function HeroSection() {
             >
               <div className="bg-gradient-to-br from-white/40 to-white/10 dark:from-gray-800/40 dark:to-gray-900/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 dark:border-gray-700/20 shadow-xl">
                 <div className="text-center space-y-6">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
-                    YD
+                  <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white/30 dark:border-gray-700/30 shadow-2xl">
+                    <Image
+                      src="/images/yusuf-profile.jpeg"
+                      alt="Yusuf Demirci"
+                      width={192}
+                      height={192}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      Quality Focused
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
-                      Her projede kaliteyi ön planda tutan yaklaşım
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 text-center">
-                    <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-900/20">
-                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                        5+
-                      </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Yıl Deneyim
-                      </div>
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        Yusuf Demirci
+                      </h3>
+                      <p className="text-blue-600 dark:text-blue-400 font-medium">
+                        Software Engineer
+                      </p>
                     </div>
-                    <div className="p-3 rounded-xl bg-purple-50 dark:bg-purple-900/20">
-                      <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                        50+
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-300">
+                        <span className="text-sm">📍</span>
+                        <span className="text-sm">İstanbul, Türkiye</span>
                       </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Tamamlanan Proje
+                      <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-300">
+                        <span className="text-sm">💼</span>
+                        <span className="text-sm">
+                          QA & Full-Stack Development
+                        </span>
                       </div>
                     </div>
                   </div>
