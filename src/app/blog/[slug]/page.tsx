@@ -59,7 +59,7 @@ const blogPosts = [
       <p>Vercel platformu ile seamless deployment pipeline oluşturuyoruz. Environment variables, preview deployments ve automatic scaling ile production-ready application deploy ediyoruz. Monitoring, logging ve error tracking ile application health'ini sürekli takip ediyoruz.</p>
     `,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-25",
+    publishedAt: "2025-08-30",
     readingTime: "15 min",
     category: "Web Development",
     tags: ["Next.js", "React", "Full-Stack", "TypeScript", "Prisma"],
@@ -106,7 +106,7 @@ const blogPosts = [
       <p>Application Performance Monitoring (APM) tools ile production environment'ta real-time metrics collect ediyoruz. Error tracking, user behavior analysis ve performance benchmarks ile continuous feedback loop oluşturuyoruz. A/B testing ve feature flags ile safe deployment strategies implement ediyoruz.</p>
     `,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-20",
+    publishedAt: "2025-08-26",
     readingTime: "12 min",
     category: "Test Automation",
     tags: ["CI/CD", "Testing", "GitHub Actions", "Jenkins", "Docker"],
@@ -156,7 +156,7 @@ const blogPosts = [
       <p>Team onboarding, training materials ve best practices documentation ile TypeScript adoption facilitate ediyoruz. Code review guidelines ve style guides ile consistent TypeScript usage ensure ediyoruz.</p>
     `,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-15",
+    publishedAt: "2025-08-20",
     readingTime: "10 min",
     category: "Programming",
     tags: ["TypeScript", "JavaScript", "Type Safety", "Web Development"],
@@ -207,7 +207,7 @@ const blogPosts = [
       <p>Real User Monitoring (RUM) ile production performance tracking implement ediyoruz. A/B testing ile performance improvements validate ediyoruz. Performance regression detection ve automated alerts ile continuous optimization maintain ediyoruz.</p>
     `,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-10",
+    publishedAt: "2025-08-14",
     readingTime: "18 min",
     category: "React",
     tags: [
@@ -283,10 +283,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               <Calendar className="w-4 h-4 mr-2" />
               {new Date(post.publishedAt).toLocaleDateString("tr-TR")}
             </div>
-            <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
-              {post.readingTime}
-            </div>
+
             <div className="flex items-center">
               <BookOpen className="w-4 h-4 mr-2" />
               {post.category}

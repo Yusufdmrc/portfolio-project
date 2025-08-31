@@ -30,7 +30,7 @@ NextAuth.js ile güvenli authentication sistemi kuruyoruz. Google, GitHub gibi O
 ## Deployment Süreci
 Vercel platformu ile hızlı ve güvenilir deployment işlemi gerçekleştiriyoruz.`,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-25",
+    publishedAt: "2025-08-30",
     readingTime: "15 min",
     category: "Web Development",
     tags: ["Next.js", "Full-Stack", "React", "TypeScript", "Prisma"],
@@ -57,7 +57,7 @@ Allure, ExtentReports gibi araçlarla detaylı test raporları oluşturup, CI/CD
 ## Paralel Test Çalıştırma
 Test Suite'lerin paralel çalıştırılması ile test süresini önemli ölçüde azaltabiliriz.`,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-20",
+    publishedAt: "2025-08-26",
     readingTime: "12 min",
     category: "Test Automation",
     tags: ["CI/CD", "Testing", "GitHub Actions", "Jenkins", "Automation"],
@@ -87,7 +87,7 @@ TypeScript'in built-in utility type'ları: Partial, Pick, Omit, Record ve diğer
 ## Advanced Type Patterns
 Conditional types, mapped types ve template literal types ile complex type operations.`,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-15",
+    publishedAt: "2025-08-20",
     readingTime: "18 min",
     category: "Programming",
     tags: ["TypeScript", "JavaScript", "Types", "Programming", "Development"],
@@ -117,7 +117,7 @@ Next.js Image component'i ile lazy loading ve responsive image'lar.
 ## Bundle Analysis
 Webpack Bundle Analyzer ile bundle size analizi ve optimization stratejileri.`,
     author: "Yusuf Demirci",
-    publishedAt: "2024-08-10",
+    publishedAt: "2025-08-14",
     readingTime: "14 min",
     category: "React",
     tags: ["React", "Performance", "Optimization", "Frontend", "JavaScript"],
@@ -226,10 +226,6 @@ export default function BlogPage() {
                       "tr-TR"
                     )}
                   </div>
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-2" />
-                    {blogPosts[0].readingTime}
-                  </div>
                 </div>
                 <Link href={`/blog/${blogPosts[0].slug}`}>
                   <Button variant="secondary" size="lg" className="group">
@@ -277,10 +273,6 @@ export default function BlogPage() {
                   <div className="flex items-center">
                     <Calendar className="w-4 h-4 mr-1" />
                     {new Date(post.publishedAt).toLocaleDateString("tr-TR")}
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {post.readingTime}
                   </div>
                 </div>
 
