@@ -15,7 +15,8 @@ export const client = createClient({
 
 const builder = imageUrlBuilder(client);
 
-export const urlFor = (source: any) => builder.image(source);
+export const urlFor = (source: { asset: { _ref: string; _type: string } } | undefined) => 
+  source ? builder.image(source) : null;
 
 // GROQ queries
 export const groqQueries = {

@@ -5,9 +5,6 @@ import { motion } from "framer-motion";
 import {
   Github,
   Linkedin,
-  Twitter,
-  Instagram,
-  Heart,
   ArrowUp,
 } from "lucide-react";
 import { useState, useEffect } from "react";
