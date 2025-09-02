@@ -2,11 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  ArrowUp,
-} from "lucide-react";
+import { Github, Linkedin, ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const socialLinks = [
