@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   creator: "Yusuf Demirci",
   publisher: "Yusuf Demirci",
   robots: "index, follow",
-  // Google Search Console verification - bu kısmı Google'dan aldığınız kod ile değiştirin
+  // Google Search Console verification
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE_HERE",
+    google: "googleb16400e2a5218364",
   },
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me"
