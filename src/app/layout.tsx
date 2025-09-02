@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     google: "YOUR_GOOGLE_VERIFICATION_CODE_HERE",
   },
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemirci.dev"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me"
   ),
   openGraph: {
     title: "Yusuf Demirci - Software Test Engineer & Full-Stack Developer",
     description:
       "Test otomasyonu, web geliştirme ve yazılım kalitesi konularında uzmanlaşmış yazılım mühendisi",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemirci.dev",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me",
     siteName: "Yusuf Demirci Portfolio",
     locale: "tr_TR",
     type: "website",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     images: ["/images/og-image.jpg"],
   },
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemirci.dev",
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me",
   },
 };
 
@@ -66,6 +66,38 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Yusuf Demirci",
+              url:
+                process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me",
+              jobTitle: "Software Test Engineer & Full-Stack Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelance",
+              },
+              knowsAbout: [
+                "Software Testing",
+                "Test Automation",
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Selenium",
+                "Cypress",
+              ],
+              sameAs: [
+                "https://linkedin.com/in/yusufdemirci",
+                "https://github.com/yusufdmrc",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${inter.className} antialiased min-h-screen transition-colors duration-300`}
       >

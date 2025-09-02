@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me/";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me";
 
   // Blog yazıları için static URL'ler
   const blogPosts = [
