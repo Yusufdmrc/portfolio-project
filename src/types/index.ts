@@ -5,17 +5,8 @@ export interface Post {
   slug: { current: string };
   publishedAt: string;
   excerpt: string;
-  mainImage?: {
-    asset: {
-      _ref: string;
-      _type: string;
-    };
-    alt?: string;
-  };
-  body?: {
-    _type: string;
-    children: unknown[];
-  }[];
+  mainImage?: any;
+  body?: any;
   categories?: Category[];
 }
 
@@ -24,28 +15,13 @@ export interface Project {
   title: string;
   slug: { current: string };
   description: string;
-  image?: {
-    asset: {
-      _ref: string;
-      _type: string;
-    };
-    alt?: string;
-  };
-  images?: {
-    asset: {
-      _ref: string;
-      _type: string;
-    };
-    alt?: string;
-  }[];
+  image?: any;
+  images?: any[];
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
   featured?: boolean;
-  content?: {
-    _type: string;
-    children: unknown[];
-  }[];
+  content?: any;
 }
 
 export interface Category {
