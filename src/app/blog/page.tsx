@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Calendar, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 const blogPosts = [
   {
@@ -13,27 +14,37 @@ const blogPosts = [
     title: "Next.js ile Full-Stack Web Projesi Oluşturma Yol Haritası",
     excerpt:
       "Sıfırdan Next.js ile modern full-stack web uygulaması geliştirme sürecinin detaylı rehberi. Database entegrasyonu, authentication, deployment ve best practices.",
-    content: `Next.js, React tabanlı full-stack web uygulamaları geliştirmek için en popüler framework'lerden biri haline geldi. Bu rehberde, sıfırdan bir proje oluşturma sürecini adım adım ele alacağız.
+    content: `Günümüzde full-stack web geliştirme, yazılım dünyasında en çok ihtiyaç duyulan alanlardan biri haline geldi. Hem frontend hem de backend tarafında yetkin olmak, bir geliştiriciyi çok daha esnek ve değerli kılıyor. Bu yazıda, modern teknolojilerle bir full-stack web projesi geliştirmek isteyenler için Next.js tabanlı bir yol haritası paylaşacağım.
 
-## Proje Kurulumu
-Next.js projesi oluşturmak için öncelikle aşağıdaki komutu kullanıyoruz:
+## 1. Temel Altyapıyı Hazırlama
+Next.js projesi oluşturmak için:
 \`\`\`bash
-npx create-next-app@latest my-project --typescript --tailwind --eslint
+npx create-next-app@latest my-project
+cd my-project
+npm run dev
 \`\`\`
 
-## Database Entegrasyonu
-Modern web uygulamaları için veritabanı entegrasyonu kritik önemde. Prisma ORM ile PostgreSQL kullanarak type-safe database işlemleri gerçekleştiriyoruz.
+## 2. Frontend: Kullanıcı Arayüzünü Tasarlama
+Tailwind CSS ile modern, responsive ve component tabanlı UI oluşturmak için:
+\`\`\`bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+\`\`\`
 
-## Authentication Sistemi
-NextAuth.js ile güvenli authentication sistemi kuruyoruz. Google, GitHub gibi OAuth providers ile sosyal medya girişi sağlıyoruz.
+## 3. Backend: API Katmanı
+Next.js projelerinde app/api/ klasörü altına dosyalar ekleyerek backend endpointleri tanımlayabilirsin.
 
-## Deployment Süreci
-Vercel platformu ile hızlı ve güvenilir deployment işlemi gerçekleştiriyoruz.`,
+## 4. Veritabanı Seçimi
+PostgreSQL / MySQL için Prisma ORM:
+\`\`\`bash
+npm install prisma @prisma/client
+npx prisma init
+\`\`\``,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-30",
     readingTime: "15 min",
     category: "Web Development",
-    tags: ["Next.js", "Full-Stack", "React", "TypeScript", "Prisma"],
+    tags: ["Next.js", "Tam Yığın", "React", "TypeScript", "Prisma"],
     image:
       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
     slug: "nextjs-fullstack-yol-haritasi",
@@ -42,25 +53,27 @@ Vercel platformu ile hızlı ve güvenilir deployment işlemi gerçekleştiriyor
     id: 2,
     title: "Test Otomasyon Projelerindeki CI/CD Süreçleri",
     excerpt:
-      "Modern test otomasyon projelerinde sürekli entegrasyon ve sürekli dağıtım süreçlerinin nasıl kurulacağı. GitHub Actions, Jenkins ve Azure DevOps örnekleri.",
-    content: `Test otomasyonu projelerinde CI/CD süreçleri, kaliteli yazılım teslimatının temelidir. Bu yazıda, test otomasyonunu CI/CD pipeline'larına entegre etme yöntemlerini inceleyeceğiz.
+      "Modern test otomasyon projelerinde CI/CD pipeline'ları nasıl kurulur ve optimize edilir? GitHub Actions, Jenkins ve Docker entegrasyonu.",
+    content: `Yazılım geliştirme dünyasında hız, güvenilirlik ve kalite artık vazgeçilmez üçlü haline geldi. Özellikle büyük ve kurumsal projelerde, kullanıcıya hatasız ürün sunmak için sadece geliştirme değil, test süreçlerinin de modern yöntemlerle yönetilmesi gerekiyor.
 
-## GitHub Actions ile CI/CD
-GitHub Actions, test otomasyonu için mükemmel bir platform sunar. Workflow dosyaları ile otomatik test çalıştırma süreçlerini yönetebiliriz.
+## CI/CD Nedir?
+**Continuous Integration (Sürekli Entegrasyon)**
+- Geliştiriciler kodlarını sık sık ortak bir repoya push eder
+- Her commit sonrası proje otomatik build edilir ve testler çalıştırılır
 
-## Jenkins Entegrasyonu
-Jenkins ile test automation framework'ümüzü entegre ederek, scheduled test runs ve parametreli test çalıştırma işlemlerini gerçekleştirebiliriz.
+**Continuous Deployment (Sürekli Dağıtım)**
+- Başarılı build ve testlerden sonra uygulama staging veya production ortamına otomatik deploy edilir
 
-## Test Raporlama
-Allure, ExtentReports gibi araçlarla detaylı test raporları oluşturup, CI/CD süreçlerine entegre ediyoruz.
-
-## Paralel Test Çalıştırma
-Test Suite'lerin paralel çalıştırılması ile test süresini önemli ölçüde azaltabiliriz.`,
+## Test Otomasyonunun CI/CD Süreçlerindeki Rolü
+Pipeline içinde farklı seviyelerde testler koşulur:
+- **Unit Testler** → Kodun en küçük parçalarının doğruluğunu kontrol eder
+- **Integration Testler** → Servislerin birlikte çalışabilirliğini test eder
+- **API Testleri** → Backend endpointlerinin doğru yanıt verdiğinden emin olunur`,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-26",
     readingTime: "12 min",
-    category: "Test Automation",
-    tags: ["CI/CD", "Testing", "GitHub Actions", "Jenkins", "Automation"],
+    category: "Test Otomasyonu",
+    tags: ["CI/CD", "Test", "GitHub Actions", "Jenkins", "Otomasyon"],
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     slug: "test-otomasyon-cicd-surecleri",
@@ -69,74 +82,122 @@ Test Suite'lerin paralel çalıştırılması ile test süresini önemli ölçü
     id: 3,
     title: "TypeScript ile Tip Güvenli Kod Yazımı",
     excerpt:
-      "JavaScript'in tip güvenliği olmayan yapısını TypeScript ile nasıl güçlendirebiliriz? Advanced types, generics, utility types ve best practices.",
-    content: `TypeScript, JavaScript'e static typing ekleyerek daha güvenilir ve maintainable kod yazmamızı sağlıyor. Bu yazıda TypeScript'in advanced özelliklerini inceleyeceğiz.
+      "TypeScript'in sunduğu type safety özellikleri ile daha güvenilir ve maintainable kod yazma teknikleri.",
+    content: `JavaScript, esnekliği sayesinde dünyanın en popüler programlama dillerinden biri haline geldi. Ancak bu esneklik, büyük ölçekli projelerde ciddi sorunlara yol açabiliyor: beklenmeyen runtime hataları, zor bakım süreçleri ve düşük kod güvenilirliği.
 
-## Type System Temelleri
-TypeScript'in type system'inin temel prensipleri ve primitive type'lar.
+## 🎯 Tip Güvenliği (Type Safety) Nedir?
+Tip güvenliği, bir değişkenin ya da fonksiyonun alabileceği değerlerin önceden tanımlanması anlamına gelir.
 
-## Interface vs Type
-Interface ve Type arasındaki farklar ve hangi durumda hangisini kullanacağımız.
+JavaScript'te:
+\`\`\`javascript
+function toUpperCase(str) {
+  return str.toUpperCase();
+}
+toUpperCase(42); // Runtime hatası!
+\`\`\`
 
-## Generic Types
-Generic type'lar ile reusable ve type-safe fonksiyonlar yazma.
+TypeScript ile:
+\`\`\`typescript
+function toUpperCase(str: string): string {
+  return str.toUpperCase();
+}
+toUpperCase(42); // Derleme hatası, runtime'a bile gelmez
+\`\`\`
 
-## Utility Types
-TypeScript'in built-in utility type'ları: Partial, Pick, Omit, Record ve diğerleri.
-
-## Advanced Type Patterns
-Conditional types, mapped types ve template literal types ile complex type operations.`,
+## 🔧 TypeScript ile Tip Güvenliği
+1. **Temel Tipler:** number, string, boolean
+2. **Interface ve Type Alias:** API sözleşmeleri
+3. **Generic'ler:** Yeniden kullanılabilir kod`,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-20",
     readingTime: "18 min",
-    category: "Programming",
-    tags: ["TypeScript", "JavaScript", "Types", "Programming", "Development"],
+    category: "Programlama",
+    tags: [
+      "TypeScript",
+      "JavaScript",
+      "Tip Güvenliği",
+      "Programlama",
+      "Geliştirme",
+    ],
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
     slug: "typescript-tip-guvenli-kod",
   },
   {
     id: 4,
-    title: "React Performance Optimization",
+    title:
+      "Frontend’den Yazılım Test Mühendisliğine: Kariyer Yolculuğum ve Öğrendiklerim",
     excerpt:
-      "React uygulamalarında performans optimizasyonu için kullanabileceğimiz teknikler. Memoization, lazy loading, code splitting, virtual scrolling ve daha fazlası.",
-    content: `React uygulamalarının performansını artırmak için çeşitli teknikler kullanabiliriz. Bu yazıda, production-ready React uygulamaları için kritik optimizasyon yöntemlerini ele alacağız.
+      "Frontend geliştirici olarak başladığım kariyerimde yazılım test mühendisliğine geçiş sürecim, öğrendiklerim ve bu deneyimimin bana kattıkları.",
+    content: `Yazılım dünyasında her gün yeni bir teknoloji, yeni bir trend ve yeni bir bakış açısı ortaya çıkıyor. Bu hızlı değişim içinde kariyer yolculuğum da farklı rollerden geçerek şekillendi. Üniversite yıllarımda frontend geliştirici olarak başladığım bu yolculuk, bugün yazılım test mühendisi olarak devam ediyor.
 
-## React.memo ve useMemo
-Component re-rendering'ini optimize etmek için React.memo ve useMemo hook'larının doğru kullanımı.
+## Frontend Dünyasına İlk Adımlarım
 
-## Code Splitting
-React.lazy ve Suspense ile dynamic import'lar kullanarak bundle size'ı optimize etme.
+Kariyerime ilk adımı attığımda, odak noktam kullanıcı arayüzü geliştirme idi. HTML, CSS ve JavaScript ile başladım. Zamanla React ve Next.js gibi modern frameworklerle çalıştım. Bu süreç bana şunları öğretti:
 
-## Virtual Scrolling
-Büyük listeler için virtual scrolling teknikleri ve react-window kullanımı.
+**Kullanıcı deneyiminin önemi:** Bir web sitesinin görsel olarak şık olması kadar, hızlı ve erişilebilir olması da kritik.
 
-## Image Optimization
-Next.js Image component'i ile lazy loading ve responsive image'lar.
+**Kod okunabilirliği:** Projelerde ekip çalışması için temiz ve sürdürülebilir kod yazmak şart.
 
-## Bundle Analysis
-Webpack Bundle Analyzer ile bundle size analizi ve optimization stratejileri.`,
+**Responsive tasarım:** Kullanıcıların farklı cihazlarda sorunsuz deneyim yaşaması temel bir gereklilik.
+
+Frontend tecrübem bana sadece teknik bilgi kazandırmadı; aynı zamanda kullanıcı gözüyle düşünme becerisi kazandırdı.
+
+## Yazılım Test Mühendisliğine Geçiş
+
+Frontend'de çalışırken fark ettim ki, geliştirdiğimiz özelliklerin sadece kodlanması değil, doğru çalışıp çalışmadığının garanti edilmesi de en az o kadar önemli. Bu farkındalık beni yazılım test mühendisliğine yönlendirdi.
+
+Test mühendisliğine geçişimle birlikte yeni sorumluluklar üstlendim:
+
+- **Manuel testler:** Kullanıcı senaryolarını adım adım test etmek
+- **Otomasyon testleri:** Selenium, TestNG, Cucumber, Appium gibi araçlarla süreçleri otomatize etmek
+- **API testleri:** Backend fonksiyonlarının doğru çalıştığından emin olmak
+- **Test yaşam döngüsü:** Gereksinim analizi, test senaryosu yazımı, hata raporlama ve regression süreçleri
+
+## Frontend Tecrübesinin Test Mühendisliğine Katkısı
+
+Frontend geçmişim, test mühendisliği yolculuğumda büyük avantaj sağladı:
+
+1. **UI testlerinde kolaylık:** Arayüz elementlerini tanımak ve doğru şekilde test etmek
+2. **Geliştirici ile iletişim:** Frontend teknolojilerini bildiğim için ekiple verimli iletişim
+3. **Kullanıcı odaklı bakış açısı:** Her testte "kullanıcı bu durumda ne görür?" diye düşünmek
+
+## Öğrendiklerim ve Çıkarımlarım
+
+- **Kodlama bilgisi test mühendisliği için büyük artı**
+- **Test sadece hata bulmak değil, kaliteyi güvence altına almak**  
+- **Takım çalışması olmazsa olmaz**
+- **Sürekli öğrenmek şart**
+
+Eğer sen de benzer bir kariyer yolculuğuna çıkmak istiyorsan, şunu unutma: Her rol birbirini besliyor. Bir alandaki tecrüben, diğerinde sana büyük avantaj sağlayabilir.`,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-14",
-    readingTime: "14 min",
-    category: "React",
-    tags: ["React", "Performance", "Optimization", "Frontend", "JavaScript"],
+    readingTime: "8 min",
+    category: "Career",
+    tags: ["Kariyer", "Frontend", "Test Mühendisliği", "Deneyim", "Geçiş"],
     image:
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80",
-    slug: "react-performance-optimization",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+    slug: "frontend-den-test-muhendisligine-kariyer-yolculugu",
   },
 ];
 
 const categories = [
-  "All",
+  "Tümü",
   "Web Development",
-  "Test Automation",
-  "Programming",
-  "React",
+  "Test Otomasyonu",
+  "Programlama",
+  "Career",
   "API Testing",
 ];
 
 export default function BlogPage() {
+  const [selectedCategory, setSelectedCategory] = useState("Tümü");
+
+  const filteredPosts =
+    selectedCategory === "Tümü"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === selectedCategory);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -181,9 +242,10 @@ export default function BlogPage() {
           {categories.map((category) => (
             <Button
               key={category}
-              variant={category === "All" ? "primary" : "outline"}
+              variant={category === selectedCategory ? "primary" : "outline"}
               size="sm"
               className="mb-2"
+              onClick={() => setSelectedCategory(category)}
             >
               {category}
             </Button>
@@ -191,7 +253,7 @@ export default function BlogPage() {
         </motion.div>
 
         {/* Featured Post */}
-        {blogPosts.length > 0 && (
+        {filteredPosts.length > 1 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -200,8 +262,8 @@ export default function BlogPage() {
           >
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white">
               <Image
-                src={blogPosts[0].image}
-                alt={blogPosts[0].title}
+                src={filteredPosts[0].image}
+                alt={filteredPosts[0].title}
                 fill
                 className="object-cover"
               />
@@ -214,20 +276,20 @@ export default function BlogPage() {
                   Öne Çıkan Yazı
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  {blogPosts[0].title}
+                  {filteredPosts[0].title}
                 </h2>
                 <p className="text-blue-100 text-lg leading-relaxed mb-6">
-                  {blogPosts[0].excerpt}
+                  {filteredPosts[0].excerpt}
                 </p>
                 <div className="flex items-center space-x-4 text-sm text-blue-200 mb-6">
                   <div className="flex items-center">
                     <Calendar className="w-4 h-4 mr-2" />
-                    {new Date(blogPosts[0].publishedAt).toLocaleDateString(
+                    {new Date(filteredPosts[0].publishedAt).toLocaleDateString(
                       "tr-TR"
                     )}
                   </div>
                 </div>
-                <Link href={`/blog/${blogPosts[0].slug}`}>
+                <Link href={`/blog/${filteredPosts[0].slug}`}>
                   <Button variant="secondary" size="lg" className="group">
                     Yazıyı Oku
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -245,7 +307,10 @@ export default function BlogPage() {
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {blogPosts.slice(1).map((post) => (
+          {(filteredPosts.length > 1
+            ? filteredPosts.slice(1)
+            : filteredPosts
+          ).map((post) => (
             <motion.article
               key={post.id}
               variants={itemVariants}

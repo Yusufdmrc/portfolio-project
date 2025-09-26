@@ -128,7 +128,7 @@ export default function ProjectsPage() {
             Projelerim
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-            Test otomasyonu, web geliştirme ve yazılım kalitesi alanındaki
+            Otomasyon, web geliştirme ve yazılım kalitesi alanındaki
             çalışmalarım. Her proje, farklı teknolojiler ve metodolojiler
             kullanılarak geliştirildi.
           </p>

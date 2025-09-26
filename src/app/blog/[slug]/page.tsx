@@ -22,41 +22,41 @@ const blogPosts = [
       "Sıfırdan Next.js ile modern full-stack web uygulaması geliştirme sürecinin detaylı rehberi. Database entegrasyonu, authentication, deployment ve best practices.",
     content: `
       <h2>Next.js ile Full-Stack Development: Modern Web Uygulamalarının Geleceği</h2>
-      <p>Next.js, React ekosisteminde server-side rendering, static site generation ve API routes gibi güçlü özelliklerle full-stack web uygulamaları geliştirmek için en tercih edilen framework haline geldi. Bu kapsamlı rehberde, sıfırdan professional bir Next.js projesi oluşturma sürecini detaylı olarak ele alacağız.</p>
+      <p>Next.js, React ekosisteminde sunucu tarafı görselleştirme, statik site oluşturma ve API rotaları gibi güçlü özelliklerle tam yığın web uygulamaları geliştirmek için en tercih edilen çatı haline geldi. Bu kapsamlı rehberde, sıfırdan profesyonel bir Next.js projesi oluşturma sürecini detaylı olarak ele alacağız.</p>
       
       <h3>🚀 Proje Kurulumu ve İlk Adımlar</h3>
-      <p>Next.js projesi oluşturmak için modern development stack'i ile başlıyoruz. TypeScript desteği, Tailwind CSS entegrasyonu ve ESLint konfigürasyonu ile professional bir geliştirme ortamı kuruyoruz:</p>
+      <p>Next.js projesi oluşturmak için modern geliştirme yığını ile başlıyoruz. TypeScript desteği, Tailwind CSS entegrasyonu ve ESLint yapılandırması ile profesyonel bir geliştirme ortamı kuruyoruz:</p>
       <pre><code>npx create-next-app@latest my-project --typescript --tailwind --eslint --app</code></pre>
-      <p>App Router yapısı ile birlikte gelen yeni özellikler, routing sistemini daha esnek ve performanslı hale getiriyor. Layout dosyaları, loading states ve error boundaries ile kullanıcı deneyimini optimize edebiliyoruz.</p>
+      <p>App Router yapısı ile birlikte gelen yeni özellikler, yönlendirme sistemini daha esnek ve performanslı hale getiriyor. Layout dosyaları, yükleme durumları ve hata sınırları ile kullanıcı deneyimini optimize edebiliyoruz.</p>
       
-      <h3>📦 Essential Paketler ve Kütüphaneler</h3>
-      <p>Modern bir full-stack projede ihtiyaç duyacağımız temel paketleri entegre ediyoruz:</p>
+      <h3>📦 Temel Paketler ve Kütüphaneler</h3>
+      <p>Modern bir tam yığın projede ihtiyaç duyacağımız temel paketleri entegre ediyoruz:</p>
       <ul>
-        <li><strong>Prisma ORM:</strong> Type-safe database queries ve migration management</li>
-        <li><strong>NextAuth.js:</strong> Secure authentication ve session management</li>
-        <li><strong>Tailwind CSS:</strong> Utility-first CSS framework ile rapid styling</li>
-        <li><strong>Framer Motion:</strong> Smooth animations ve micro-interactions</li>
-        <li><strong>Zustand/Redux Toolkit:</strong> Client-side state management</li>
-        <li><strong>React Hook Form:</strong> Performant form handling ve validation</li>
-        <li><strong>Zod:</strong> Runtime type validation ve schema definition</li>
+        <li><strong>Prisma ORM:</strong> Tip güvenli veritabanı sorguları ve göç yönetimi</li>
+        <li><strong>NextAuth.js:</strong> Güvenli kimlik doğrulama ve oturum yönetimi</li>
+        <li><strong>Tailwind CSS:</strong> Hızlı stillemek için yardımcı öncelikli CSS çatısı</li>
+        <li><strong>Framer Motion:</strong> Pürüzsüz animasyonlar ve mikro etkileşimler</li>
+        <li><strong>Zustand/Redux Toolkit:</strong> İstemci tarafı durum yönetimi</li>
+        <li><strong>React Hook Form:</strong> Performanslı form işleme ve doğrulama</li>
+        <li><strong>Zod:</strong> Çalışma zamanı tip doğrulama ve şema tanımı</li>
       </ul>
       
-      <h3>🗃️ Database Architecture ve Prisma Entegrasyonu</h3>
-      <p>Modern web uygulamalarında data layer'ın doğru tasarlanması kritik öneme sahiptir. Prisma ORM ile PostgreSQL veya MySQL database'i entegre ederek type-safe ve scalable bir veri yönetim sistemi kuruyoruz. Schema design patterns, relations ve indexing stratejileri ile performanslı database queries oluşturuyoruz.</p>
-      <p>Migration sistemleri ve seeding processes ile development ve production ortamları arasında consistency sağlıyoruz. Database connection pooling ve query optimization teknikleri ile application performance'ını maximize ediyoruz.</p>
+      <h3>🗃️ Veritabanı Mimarisi ve Prisma Entegrasyonu</h3>
+      <p>Modern web uygulamalarında veri katmanının doğru tasarlanması kritik öneme sahiptir. Prisma ORM ile PostgreSQL veya MySQL veritabanını entegre ederek tip güvenli ve ölçeklenebilir bir veri yönetim sistemi kuruyoruz. Şema tasarım desenleri, ilişkiler ve indeksleme stratejileri ile performanslı veritabanı sorguları oluşturuyoruz.</p>
+      <p>Göç sistemleri ve veri ekme süreçleri ile geliştirme ve üretim ortamları arasında tutarlılık sağlıyoruz. Veritabanı bağlantı havuzlama ve sorgu optimizasyon teknikleri ile uygulama performansını maksimize ediyoruz.</p>
       
-      <h3>🔐 Authentication ve Authorization Sistemi</h3>
-      <p>NextAuth.js ile comprehensive authentication sistemi oluşturuyoruz. OAuth providers (Google, GitHub, Discord), JWT tokens ve session management ile secure user authentication sağlıyoruz. Role-based access control (RBAC) ve permission systems ile authorization layer'ı implement ediyoruz.</p>
-      <p>Security best practices, CSRF protection ve secure cookie handling ile application security'sini güçlendiriyoruz. Password hashing, rate limiting ve account verification süreçleri ile user accounts'ı koruyoruz.</p>
+      <h3>🔐 Kimlik Doğrulama ve Yetkilendirme Sistemi</h3>
+      <p>NextAuth.js ile kapsamlı kimlik doğrulama sistemi oluşturuyoruz. OAuth sağlayıcıları (Google, GitHub, Discord), JWT tokenları ve oturum yönetimi ile güvenli kullanıcı kimlik doğrulaması sağlıyoruz. Rol tabanlı erişim kontrolü (RBAC) ve izin sistemleri ile yetkilendirme katmanını uyguluyoruz.</p>
+      <p>Güvenlik en iyi uygulamaları, CSRF koruması ve güvenli çerez işleme ile uygulama güvenliğini güçlendiriyoruz. Parola şifreleme, hız sınırlama ve hesap doğrulama süreçleri ile kullanıcı hesaplarını koruyoruz.</p>
       
-      <h3>🎨 UI/UX Design ve Component Architecture</h3>
-      <p>Responsive design principles ve modern UI patterns ile kullanıcı dostu interface'ler tasarlıyoruz. Component-driven development approach ile reusable ve maintainable UI components oluşturuyoruz. Design systems ve style guides ile consistent user experience sağlıyoruz.</p>
+      <h3>🎨 UI/UX Tasarım ve Bileşen Mimarisi</h3>
+      <p>Duyarlı tasarım prensipleri ve modern arayüz desenleri ile kullanıcı dostu arayüzler tasarlıyoruz. Bileşen odaklı geliştirme yaklaşımı ile yeniden kullanılabilir ve sürdürülebilir UI bileşenleri oluşturuyoruz. Tasarım sistemleri ve stil kılavuzları ile tutarlı kullanıcı deneyimi sağlıyoruz.</p>
       
-      <h3>⚡ Performance Optimization</h3>
-      <p>Next.js'in sunduğu Image optimization, automatic code splitting ve caching mechanisms ile application performance'ını optimize ediyoruz. Lazy loading, prefetching ve bundle analysis ile page load times'ı minimize ediyoruz.</p>
+      <h3>⚡ Performans Optimizasyonu</h3>
+      <p>Next.js'in sunduğu görüntü optimizasyonu, otomatik kod bölme ve önbellekleme mekanizmaları ile uygulama performansını optimize ediyoruz. Tembel yükleme, ön getirme ve paket analizi ile sayfa yükleme sürelerini minimize ediyoruz.</p>
       
-      <h3>🚀 Production Deployment ve DevOps</h3>
-      <p>Vercel platformu ile seamless deployment pipeline oluşturuyoruz. Environment variables, preview deployments ve automatic scaling ile production-ready application deploy ediyoruz. Monitoring, logging ve error tracking ile application health'ini sürekli takip ediyoruz.</p>
+      <h3>🚀 Üretim Dağıtımı ve DevOps</h3>
+      <p>Vercel platformu ile sorunsuz dağıtım hattı oluşturuyoruz. Ortam değişkenleri, ön izleme dağıtımları ve otomatik ölçekleme ile üretime hazır uygulamayı dağıtıyoruz. İzleme, günlük kaydı ve hata takibi ile uygulama sağlığını sürekli takip ediyoruz.</p>
     `,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-30",
@@ -73,37 +73,99 @@ const blogPosts = [
     excerpt:
       "Modern test otomasyon projelerinde CI/CD pipeline'ları nasıl kurulur ve optimize edilir? GitHub Actions, Jenkins ve Docker entegrasyonu.",
     content: `
-      <h2>Test Otomasyon ve CI/CD: Modern Yazılım Geliştirmede Kalite Assurance</h2>
-      <p>Test otomasyonu ve CI/CD süreçleri, modern yazılım geliştirme döngüsünün ayrılmaz parçaları haline geldi. Continuous integration ve continuous deployment practices ile yazılım kalitesini artırmak, deployment süreçlerini hızlandırmak ve human error'ları minimize etmek mümkün hale geliyor. Bu kapsamlı rehberde, enterprise-level test otomasyon projelerinde CI/CD pipeline'larının nasıl kurulacağını ve optimize edileceğini detaylı olarak ele alacağız.</p>
+      <h2>Test Otomasyon Projelerindeki CI/CD Süreçleri</h2>
+      <h3>Giriş</h3>
+      <p>Yazılım geliştirme dünyasında hız, güvenilirlik ve kalite artık vazgeçilmez üçlü haline geldi. Özellikle büyük ve kurumsal projelerde, kullanıcıya hatasız ürün sunmak için sadece geliştirme değil, test süreçlerinin de modern yöntemlerle yönetilmesi gerekiyor. İşte bu noktada CI/CD (Continuous Integration / Continuous Deployment) süreçleri devreye giriyor.</p>
+      <p>Bu yazıda, test otomasyon projelerinin CI/CD süreçlerine nasıl entegre edildiğini, hangi araçların kullanıldığını ve doğru uygulama stratejilerini ele alacağız.</p>
       
-      <h3>🔧 GitHub Actions ile Modern CI/CD Pipeline</h3>
-      <p>GitHub Actions, kod repository'sinde gerçekleşen her değişiklikte otomatik olarak tetiklenen workflow'lar oluşturmamızı sağlar. Test otomasyon projelerinde, pull request'ler açıldığında, main branch'e merge edildiğinde veya scheduled intervals'larda otomatik test çalıştırma süreçlerini yapılandırıyoruz.</p>
-      <p>Matrix strategies kullanarak farklı operating systems, browser versions ve test environments'ta paralel test execution sağlıyoruz. Workflow artifacts ile test results, screenshots ve logs'ları preserve edip, team members'ların kolayca access edebileceği şekilde organize ediyoruz.</p>
-      <p>Environment-specific configurations ile development, staging ve production environments için farklı test strategies implement ediyoruz. Secrets management ile API keys, database credentials ve sensitive data'yı secure şekilde handle ediyoruz.</p>
+      <h3>CI/CD Nedir?</h3>
+      <h4>Continuous Integration (Sürekli Entegrasyon)</h4>
+      <ul>
+        <li>Geliştiriciler kodlarını sık sık ortak bir repoya push eder.</li>
+        <li>Her commit sonrası proje otomatik build edilir ve testler çalıştırılır.</li>
+        <li>Amaç: Hataları erken tespit etmek ve entegrasyon sorunlarını minimuma indirmek.</li>
+      </ul>
       
-      <h3>🐳 Docker Containerization ve Environment Management</h3>
-      <p>Docker containers kullanarak test environments'ın standardizasyonunu ve isolation'ını sağlıyoruz. Multi-stage Docker builds ile efficient container images oluşturup, test execution time'ını optimize ediyoruz. Container orchestration ile scalable test infrastructure kuruyoruz.</p>
-      <p>Docker Compose ile complex application stacks'i (database, message queues, external services) local development environment'ta replicate ediyoruz. Volume mounting ve networking configurations ile realistic test scenarios oluşturuyoruz.</p>
-      <p>Selenium Grid ve Docker integration ile cross-browser testing capabilities sağlıyoruz. Headless browsers ve visual regression testing için optimized container configurations implement ediyoruz.</p>
+      <h4>Continuous Deployment (Sürekli Dağıtım)</h4>
+      <ul>
+        <li>Başarılı build ve testlerden sonra uygulama staging veya production ortamına otomatik deploy edilir.</li>
+        <li>Amaç: Teslimatı hızlandırmak, insan hatasını azaltmak ve sürekli olarak güncel sürüm sunmaktır.</li>
+      </ul>
       
-      <h3>🚀 Jenkins Enterprise Integration</h3>
-      <p>Jenkins ile enterprise-level CI/CD automation kuruyoruz. Pipeline as Code approach ile Jenkinsfile'lar oluşturup, version control altında pipeline definitions'ları manage ediyoruz. Multi-branch pipelines ile feature branches için automatic test execution sağlıyoruz.</p>
-      <p>Jenkins plugins ecosystem'i kullanarak third-party tools integration (JIRA, Slack, email notifications) gerçekleştiriyoruz. Build triggers, scheduled executions ve manual deployment approvals ile flexible release management implement ediyoruz.</p>
+      <h3>Test Otomasyonunun CI/CD Süreçlerindeki Rolü</h3>
+      <p>Test otomasyonu, CI/CD süreçlerinde kalite güvencesinin bel kemiğidir. Pipeline içinde farklı seviyelerde testler koşulur:</p>
+      <ul>
+        <li><strong>Unit Testler</strong> → Kodun en küçük parçalarının doğruluğunu kontrol eder.</li>
+        <li><strong>Integration Testler</strong> → Servislerin veya modüllerin birlikte çalışabilirliğini test eder.</li>
+        <li><strong>API Testleri</strong> → Backend endpointlerinin doğru yanıt verdiğinden emin olunur.</li>
+        <li><strong>UI / E2E Testleri</strong> → Gerçek kullanıcı senaryolarını uçtan uca simüle eder.</li>
+      </ul>
+      <p>👉 Bu testlerin otomatik çalıştırılması sayesinde, kod her değiştiğinde yazılımın güvenilirliği korunur.</p>
       
-      <h3>📊 Advanced Test Reporting ve Analytics</h3>
-      <p>Allure Framework ile comprehensive test reporting sistemi kuruyoruz. Test execution trends, failure analysis ve performance metrics ile data-driven insights elde ediyoruz. Historical test data analizi ile flaky tests identification ve stability improvements sağlıyoruz.</p>
-      <p>ExtentReports ile customizable HTML reports oluşturup, stakeholders için executive summaries hazırlıyoruz. Screenshots, video recordings ve step-by-step execution logs ile detailed failure investigation capabilities sağlıyoruz.</p>
-      <p>Test metrics dashboards ile real-time monitoring ve alerting systems kuruyoruz. Code coverage reports ve quality gates ile minimum quality standards enforce ediyoruz.</p>
+      <h3>Kullanılan CI/CD Araçları</h3>
+      <ul>
+        <li><strong>Jenkins</strong> → En yaygın açık kaynak CI/CD aracı, büyük organizasyonlarda tercih edilir.</li>
+        <li><strong>GitHub Actions</strong> → GitHub reposuna entegre, hızlı kurulum ve kullanım kolaylığı sağlar.</li>
+        <li><strong>GitLab CI/CD</strong> → GitLab kullanıcıları için entegre pipeline çözümü.</li>
+        <li><strong>CircleCI, TravisCI, Azure DevOps</strong> → Alternatif modern çözümler.</li>
+      </ul>
       
-      <h3>⚡ Parallel Execution ve Performance Optimization</h3>
-      <p>Test Suite'lerin parallel execution ile test cycle time'ını dramatically reduce ediyoruz. TestNG, JUnit veya pytest ile test parallelization strategies implement ediyoruz. Load balancing ve resource optimization ile maximum efficiency achieve ediyoruz.</p>
-      <p>Test data management ve isolation strategies ile parallel execution'da data conflicts'i prevent ediyoruz. Dynamic test distribution algorithms ile optimal resource utilization sağlıyoruz.</p>
+      <h3>Test Araçları ile Entegrasyon</h3>
+      <ul>
+        <li><strong>Selenium, Cypress, Playwright</strong> → UI otomasyon testleri.</li>
+        <li><strong>JUnit, TestNG, Jest, Mocha</strong> → Unit test framework'leri.</li>
+        <li><strong>Postman/Newman, RestAssured</strong> → API testleri.</li>
+        <li><strong>Appium</strong> → Mobil uygulama test otomasyonu.</li>
+        <li><strong>Allure Report, ExtentReports</strong> → Test raporlama ve analiz araçları.</li>
+      </ul>
       
-      <h3>🔒 Security Testing Integration</h3>
-      <p>OWASP security testing practices'i CI/CD pipeline'a integrate ediyoruz. Vulnerability scanning, dependency checking ve security code analysis ile proactive security measures implement ediyoruz. Compliance requirements ve security standards'ı automated testing ile ensure ediyoruz.</p>
+      <h3>Örnek CI/CD Pipeline Senaryosu</h3>
+      <h4>1. Kod Push</h4>
+      <p>Geliştirici kodu GitHub'a gönderir.</p>
       
-      <h3>📈 Monitoring ve Continuous Improvement</h3>
-      <p>Application Performance Monitoring (APM) tools ile production environment'ta real-time metrics collect ediyoruz. Error tracking, user behavior analysis ve performance benchmarks ile continuous feedback loop oluşturuyoruz. A/B testing ve feature flags ile safe deployment strategies implement ediyoruz.</p>
+      <h4>2. Build</h4>
+      <p>Proje otomatik build edilir (mvn clean install, npm run build vb.).</p>
+      
+      <h4>3. Test Çalıştırma</h4>
+      <ul>
+        <li>Unit testler → hızlı geri bildirim sağlar.</li>
+        <li>API ve UI testleri → smoke veya regression setleri çalıştırılır.</li>
+      </ul>
+      
+      <h4>4. Raporlama</h4>
+      <ul>
+        <li>Allure veya ExtentReports ile test sonuçları görselleştirilir.</li>
+        <li>Başarısız testlerde pipeline durur.</li>
+      </ul>
+      
+      <h4>5. Deploy</h4>
+      <p>Testler geçtiyse staging veya production ortamına otomatik dağıtım yapılır.</p>
+      
+      <h3>Test Otomasyonu + CI/CD'nin Sağladığı Avantajlar</h3>
+      <ul>
+        <li>🚀 <strong>Hızlı geri bildirim</strong> → Hatalar dakikalar içinde fark edilir.</li>
+        <li>✅ <strong>Kalite güvencesi</strong> → Her build belirli test setlerinden geçer.</li>
+        <li>🔄 <strong>Sürdürülebilirlik</strong> → Tekrarlanabilir ve standart süreçler.</li>
+        <li>👨‍👩‍👧‍👦 <strong>Ekip verimliliği</strong> → Geliştirici ve test ekibi arasında sorunsuz entegrasyon.</li>
+        <li>🔒 <strong>Risk azaltma</strong> → Canlıya çıkan sürümlerde beklenmeyen hataların azalması.</li>
+      </ul>
+      
+      <h3>Dikkat Edilmesi Gereken Noktalar</h3>
+      <ul>
+        <li><strong>Test Süresi:</strong> Uzun süren regression testler pipeline'ı yavaşlatabilir → smoke testler ayrılmalı.</li>
+        <li><strong>Paralel Test Çalıştırma:</strong> Özellikle UI testlerinde zaman kazandırır.</li>
+        <li><strong>Ortam Yönetimi:</strong> Test ortamları production'a mümkün olduğunca benzer olmalı.</li>
+        <li><strong>Flaky Testler:</strong> Stabil olmayan testler pipeline güvenilirliğini zedeler, öncelikle çözülmeli.</li>
+      </ul>
+      
+      <h3>Sonuç</h3>
+      <p>Test otomasyon projelerinin CI/CD süreçlerine entegrasyonu, modern yazılım geliştirme kültürünün temel taşıdır.</p>
+      <ul>
+        <li>Hataları erken yakalar,</li>
+        <li>Teslimatı hızlandırır,</li>
+        <li>Kaliteyi sürekli hale getirir.</li>
+      </ul>
+      <p>Doğru araç seçimi, pipeline optimizasyonu ve iyi yapılandırılmış test stratejileri ile ekipler hem güvenilir hem de hızlı yazılım teslim edebilir.</p>
     `,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-26",
@@ -120,40 +182,125 @@ const blogPosts = [
     excerpt:
       "TypeScript'in sunduğu type safety özellikleri ile daha güvenilir ve maintainable kod yazma teknikleri.",
     content: `
-      <h2>TypeScript ile Modern Development: Type Safety ve Developer Experience Revolution</h2>
-      <p>TypeScript, JavaScript'in superset'i olarak Microsoft tarafından geliştirilen, static type checking özelliği kazandırarak modern web development'ta paradigm shift yaratmış bir programlama dilidir. Large-scale applications'da maintainability, developer productivity ve code quality açısından sağladığı avantajlar, onu enterprise-level projeler için vazgeçilmez hale getirmiştir. Bu comprehensive guide'da TypeScript'in advanced features'larını ve best practices'lerini detaylı olarak ele alacağız.</p>
+      <h2>TypeScript ile Tip Güvenli Kod Yazımı</h2>
+      <h3>Giriş</h3>
+      <p>JavaScript, esnekliği sayesinde dünyanın en popüler programlama dillerinden biri haline geldi. Ancak bu esneklik, büyük ölçekli projelerde ciddi sorunlara yol açabiliyor: beklenmeyen runtime hataları, zor bakım süreçleri ve düşük kod güvenilirliği. İşte bu noktada TypeScript devreye giriyor.</p>
+      <p>Microsoft tarafından geliştirilen TypeScript, JavaScript'in bir superset'i olup, statik tip kontrolü ekleyerek geliştiricilere tip güvenliği sağlıyor. Bu sayede daha tahmin edilebilir, sürdürülebilir ve hatalara karşı dayanıklı kod yazmak mümkün hale geliyor.</p>
       
-      <h3>🎯 Type Safety ve Compile-Time Error Detection</h3>
-      <p>TypeScript'in temel avantajı compile-time type checking ile runtime hatalarını minimize etmesidir. Type annotations, interface definitions ve generics kullanarak code reliability'sini dramatically improve ediyoruz. Null safety, undefined checks ve strict type enforcement ile robust applications geliştirebiliyoruz.</p>
-      <p>Type guards, discriminated unions ve conditional types ile complex data structures'ı safely handle ediyoruz. Type narrowing techniques ile runtime type checking'i minimize edip, performance optimizations sağlıyoruz. Exhaustiveness checking ile switch statements ve pattern matching'de comprehensive coverage ensure ediyoruz.</p>
+      <h3>🎯 Tip Güvenliği (Type Safety) Nedir?</h3>
+      <p>Tip güvenliği, bir değişkenin ya da fonksiyonun alabileceği değerlerin önceden tanımlanması ve derleme sırasında kontrol edilmesi anlamına gelir.</p>
+      <p>Örneğin JavaScript'te:</p>
+      <pre><code>function toUpperCase(str) {
+  return str.toUpperCase();
+}
+
+toUpperCase(42); // Runtime hatası!</code></pre>
       
-      <h3>🏗️ Advanced Interface ve Type System Architecture</h3>
-      <p>Interface definitions ile clean API contracts oluşturup, team collaboration'ı improve ediyoruz. Extending interfaces, intersection types ve mapped types ile flexible type hierarchies design ediyoruz. Declaration merging ve module augmentation ile third-party libraries'i extend edebiliyoruz.</p>
-      <p>Utility types (Partial, Required, Pick, Omit, Record) ile type transformations gerçekleştirip, code duplication'ı prevent ediyoruz. Template literal types ile string manipulation'ları type-safe şekilde handle ediyoruz. Branded types ile primitive types'a semantic meaning kazandırıyoruz.</p>
+      <p>Aynı kodu TypeScript ile yazdığımızda:</p>
+      <pre><code>function toUpperCase(str: string): string {
+  return str.toUpperCase();
+}
+
+toUpperCase(42); // Derleme hatası, runtime'a bile gelmez</code></pre>
       
-      <h3>🔧 Generics ve Advanced Type Patterns</h3>
-      <p>Generic programming ile reusable ve type-safe kod yazıyoruz. Type parameters, constraints ve default generic types ile flexible APIs design ediyoruz. Higher-order types ve type-level programming ile complex type relationships model ediyoruz.</p>
-      <p>Conditional types ile type-level logic implement ediyoruz. Infer keyword ile type extraction ve transformation patterns oluşturuyoruz. Recursive types ile nested data structures'ı elegantly handle ediyoruz.</p>
+      <p>👉 Görüldüğü gibi hatayı daha kod çalışmadan yakalamış oluyoruz.</p>
       
-      <h3>🌐 React ve TypeScript Integration Best Practices</h3>
-      <p>React components için comprehensive type definitions yazıyoruz. Props interfaces, event handlers ve ref types ile component contracts define ediyoruz. Generic components ile reusable UI libraries oluşturuyoruz.</p>
-      <p>Context API, custom hooks ve state management için type-safe patterns implement ediyoruz. React Query, Redux Toolkit gibi libraries ile TypeScript integration optimize ediyoruz. JSX element types ve component composition patterns ile maintainable component architectures oluşturuyoruz.</p>
+      <h3>🏗️ Tip Güvenli Kod Yazmanın Avantajları</h3>
+      <ul>
+        <li><strong>Hataları erken yakalar</strong> → Runtime yerine compile-time'da.</li>
+        <li><strong>Kod okunabilirliğini artırır</strong> → Fonksiyon imzaları ve tipler, bir nevi dokümantasyon işlevi görür.</li>
+        <li><strong>Refactoring'i kolaylaştırır</strong> → IDE desteği sayesinde güvenle kodu değiştirebilirsiniz.</li>
+        <li><strong>Takım iş birliğini geliştirir</strong> → API sözleşmeleri net bir şekilde tanımlanır.</li>
+        <li><strong>Bakımı kolaylaştırır</strong> → Uzun vadeli projelerde sürdürülebilirlik sağlar.</li>
+      </ul>
       
-      <h3>� Node.js Backend Development ile TypeScript</h3>
-      <p>Express.js, Fastify gibi frameworks ile type-safe backend APIs geliştiriyoruz. Request/response types, middleware definitions ve error handling patterns ile robust server applications oluşturuyoruz. Database ORMs (Prisma, TypeORM) ile type-safe database operations implement ediyoruz.</p>
-      <p>API route handlers, authentication middleware ve validation schemas için comprehensive type coverage sağlıyoruz. Dependency injection patterns ve service layer architectures ile scalable backend systems design ediyoruz.</p>
+      <h3>🔧 TypeScript ile Tip Güvenliği Nasıl Sağlanır?</h3>
+      <h4>1. Temel Tipler</h4>
+      <pre><code>let age: number = 25;
+let name: string = "Yusuf";
+let isActive: boolean = true;</code></pre>
       
-      <h3>🧪 Testing Strategies ve Type Safety</h3>
-      <p>Jest, Vitest gibi testing frameworks ile TypeScript integration optimize ediyoruz. Type-safe mocks, test utilities ve assertion helpers oluşturuyoruz. End-to-end testing tools (Playwright, Cypress) ile TypeScript support enable ediyoruz.</p>
-      <p>Test data generators, factory patterns ve type-safe test scenarios ile comprehensive test coverage achieve ediyoruz. Property-based testing ve generative testing approaches ile edge cases discover ediyoruz.</p>
+      <h4>2. Array ve Object Tipleri</h4>
+      <pre><code>let numbers: number[] = [1, 2, 3];
+let user: { id: number; name: string } = { id: 1, name: "Yusuf" };</code></pre>
       
-      <h3>⚙️ Build Tools ve Development Environment</h3>
-      <p>TypeScript compiler options optimize edip, build performance improve ediyoruz. ESLint, Prettier integrations ile code quality standards enforce ediyoruz. Path mapping, module resolution ve declaration files ile development experience enhance ediyoruz.</p>
-      <p>Webpack, Vite, esbuild gibi bundlers ile TypeScript compilation optimize ediyoruz. Source maps, debug configurations ve development server setups ile efficient debugging workflows oluşturuyoruz.</p>
+      <h4>3. Interface ve Type Alias</h4>
+      <pre><code>interface User {
+  id: number;
+  name: string;
+  email?: string; // opsiyonel
+}
+
+const user: User = { id: 1, name: "Yusuf" };</code></pre>
       
-      <h3>📚 Migration Strategies ve Gradual Adoption</h3>
-      <p>Existing JavaScript codebases'i TypeScript'e migrate etmek için step-by-step strategies implement ediyoruz. allowJs, checkJs configurations ile gradual migration enable ediyoruz. Type declaration files (.d.ts) ile legacy code'u type-safe şekilde integrate ediyoruz.</p>
-      <p>Team onboarding, training materials ve best practices documentation ile TypeScript adoption facilitate ediyoruz. Code review guidelines ve style guides ile consistent TypeScript usage ensure ediyoruz.</p>
+      <h4>4. Union ve Literal Tipler</h4>
+      <pre><code>type Status = "pending" | "success" | "error";
+
+let currentStatus: Status = "pending";</code></pre>
+      
+      <h4>5. Generic'ler</h4>
+      <pre><code>function identity<T>(value: T): T {
+  return value;
+}
+
+let num = identity<number>(5);
+let str = identity<string>("hello");</code></pre>
+      
+      <h4>6. Type Guard'lar</h4>
+      <pre><code>function printLength(value: string | string[]) {
+  if (typeof value === "string") {
+    console.log(value.length);
+  } else {
+    console.log(value.length);
+  }
+}</code></pre>
+      
+      <h3>🌐 Gerçek Hayat Senaryoları</h3>
+      <h4>API Response Tipi</h4>
+      <pre><code>interface ApiResponse<T> {
+  data: T;
+  error?: string;
+}
+
+function fetchUser(): ApiResponse<{ id: number; name: string }> {
+  return { data: { id: 1, name: "Yusuf" } };
+}</code></pre>
+      
+      <h4>React Component Props</h4>
+      <pre><code>interface ButtonProps {
+  label: string;
+  onClick: () => void;
+}
+
+const Button = ({ label, onClick }: ButtonProps) => (
+  <button onClick={onClick}>{label}</button>
+);</code></pre>
+      
+      <h3>🧪 Test Otomasyonunda TypeScript Kullanımı</h3>
+      <p>Test otomasyonu yazarken de tip güvenliği büyük avantaj sağlar:</p>
+      <ul>
+        <li>Cypress ve Playwright entegrasyonlarında tipli API'ler ile daha az hata.</li>
+        <li>Mock veriler için tip tanımları sayesinde yanlış veriyle test çalıştırma engellenir.</li>
+        <li>Test fonksiyonlarının giriş ve çıkış tipleri net şekilde tanımlanır.</li>
+      </ul>
+      
+      <h3>⚙️ Best Practices</h3>
+      <ul>
+        <li><strong>strict</strong> modunu daima aktif edin (tsconfig.json içinde).</li>
+        <li><strong>any</strong> tipinden kaçının, gerekiyorsa <strong>unknown</strong> kullanın.</li>
+        <li><strong>Utility types</strong> (Partial, Pick, Omit, Record) ile tip tekrarını azaltın.</li>
+        <li>API tiplerini ayrı bir dosyada saklayın → <strong>types/</strong> klasörü.</li>
+        <li>Kod incelemelerinde tip kontrolüne önem verin.</li>
+      </ul>
+      
+      <h3>Sonuç</h3>
+      <p>TypeScript ile tip güvenli kod yazmak, modern yazılım geliştirmede kaliteyi ve güvenilirliği artıran en önemli adımlardan biridir.</p>
+      <ul>
+        <li>Hataları önceden yakalar,</li>
+        <li>Kodun sürdürülebilirliğini artırır,</li>
+        <li>Takım içinde net iletişim sağlar.</li>
+      </ul>
+      <p>Kısacası, küçük projelerden enterprise seviyedeki uygulamalara kadar TypeScript tip güvenliği, hem developer experience'ı hem de kullanıcı deneyimini doğrudan iyileştirir.</p>
     `,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-20",
@@ -170,41 +317,41 @@ const blogPosts = [
     excerpt:
       "React uygulamalarında performance bottlenecks'i identify etmek ve advanced optimization techniques ile user experience'ı improve etmek için comprehensive guide.",
     content: `
-      <h2>React Performance Optimization: Scalable Applications için Advanced Strategies</h2>
-      <p>Modern React applications complexity artışı ile birlikte performance optimization critical bir skill haline geldi. Large-scale applications'da user experience'ı maintain ederken scalability ve maintainability achieve etmek için comprehensive performance strategies implement etmek gerekiyor. Bu detailed guide'da React ecosystem'inde advanced performance optimization techniques'leri ve best practices'leri ele alacağız.</p>
+      <h2>React Performance Optimization: Scalable Application'lar için Advanced Strategy'ler</h2>
+      <p>Modern React application'ların complexity artışı ile birlikte performance optimization critical bir skill haline geldi. Large-scale application'larda user experience'ı maintain ederken scalability ve maintainability achieve etmek için comprehensive performance strategy'leri implement etmek gerekiyor. Bu detailed guide'da React ekosisteminde advanced performance optimization technique'leri ve best practice'leri ele alacağız.</p>
       
       <h3>🔍 Performance Profiling ve Bottleneck Detection</h3>
-      <p>React DevTools Profiler ile component rendering performance'ını analyze ediyoruz. Flame graphs, ranked charts ve interaction tracking ile performance bottlenecks'i identify ediyoruz. Chrome DevTools Performance tab ile JavaScript execution time, layout thrashing ve paint operations monitor ediyoruz.</p>
-      <p>Web Vitals metrics (LCP, FID, CLS) ile real user performance tracking implement ediyoruz. Lighthouse audits, PageSpeed Insights ve synthetic monitoring ile continuous performance measurement sağlıyoruz. Performance budgets ve alerting systems ile performance regressions prevent ediyoruz.</p>
+      <p>React DevTools Profiler ile component rendering performance'ını analyze ediyoruz. Flame graph'ları, ranked chart'ları ve interaction tracking ile performance bottleneck'leri identify ediyoruz. Chrome DevTools Performance tab ile JavaScript execution time, layout thrashing ve paint operation'ları monitor ediyoruz.</p>
+      <p>Web Vitals metric'leri (LCP, FID, CLS) ile real user performance tracking implement ediyoruz. Lighthouse audit'leri, PageSpeed Insights ve synthetic monitoring ile continuous performance measurement sağlıyoruz. Performance budget'ları ve alerting system'leri ile performance regression'ları prevent ediyoruz.</p>
       
-      <h3>⚡ Memoization Strategies ve Rendering Optimizations</h3>
-      <p>React.memo, useMemo ve useCallback hooks ile unnecessary re-renders prevent ediyoruz. Referential equality, dependency arrays ve memoization patterns ile optimal component behavior achieve ediyoruz. Higher-order components ve render props patterns ile reusable optimization logic oluşturuyoruz.</p>
-      <p>Component composition patterns ile prop drilling minimize edip, context usage optimize ediyoruz. State colocation ve state splitting strategies ile component isolation ve performance improve ediyoruz. Virtual scrolling ve windowing techniques ile large lists efficiently render ediyoruz.</p>
+      <h3>⚡ Memoization Strategy'leri ve Rendering Optimization'ları</h3>
+      <p>React.memo, useMemo ve useCallback hook'ları ile unnecessary re-render'ları prevent ediyoruz. Referential equality, dependency array'leri ve memoization pattern'ları ile optimal component behavior achieve ediyoruz. Higher-order component'leri ve render props pattern'ları ile reusable optimization logic oluşturuyoruz.</p>
+      <p>Component composition pattern'ları ile prop drilling minimize edip, context usage'ını optimize ediyoruz. State colocation ve state splitting strategy'leri ile component isolation ve performance improve ediyoruz. Virtual scrolling ve windowing technique'leri ile large list'leri efficiently render ediyoruz.</p>
       
       <h3>🎛️ State Management Performance</h3>
-      <p>Redux Toolkit ile normalized state structures ve selector optimization implement ediyoruz. Reselect library ile memoized selectors oluşturup, expensive computations cache ediyoruz. State update patterns ve immutability best practices ile predictable state management sağlıyoruz.</p>
-      <p>Zustand, Jotai gibi lightweight state management solutions ile over-engineering prevent ediyoruz. Server state ve client state separation ile appropriate caching strategies implement ediyoruz. Optimistic updates ve background synchronization ile responsive user interactions sağlıyoruz.</p>
+      <p>Redux Toolkit ile normalized state structure'ları ve selector optimization implement ediyoruz. Reselect library ile memoized selector'lar oluşturup, expensive computation'ları cache ediyoruz. State update pattern'ları ve immutability best practice'leri ile predictable state management sağlıyoruz.</p>
+      <p>Zustand, Jotai gibi lightweight state management solution'ları ile over-engineering prevent ediyoruz. Server state ve client state separation ile appropriate caching strategy'leri implement ediyoruz. Optimistic update'ler ve background synchronization ile responsive user interaction'ları sağlıyoruz.</p>
       
       <h3>📦 Code Splitting ve Lazy Loading</h3>
-      <p>Dynamic imports ve React.lazy ile route-based code splitting implement ediyoruz. Webpack bundle analysis ile chunk sizes optimize ediyoruz. Preloading strategies ve resource hints ile critical resources prioritize ediyoruz.</p>
-      <p>Component-level code splitting ile granular loading control sağlıyoruz. Suspense boundaries ve error boundaries ile graceful loading states handle ediyoruz. Module federation ile micro-frontend architectures enable ediyoruz.</p>
+      <p>Dynamic import'ları ve React.lazy ile route-based code splitting implement ediyoruz. Webpack bundle analysis ile chunk size'ları optimize ediyoruz. Preloading strategy'leri ve resource hint'leri ile critical resource'ları prioritize ediyoruz.</p>
+      <p>Component-level code splitting ile granular loading control sağlıyoruz. Suspense boundary'leri ve error boundary'leri ile graceful loading state'leri handle ediyoruz. Module federation ile micro-frontend architecture'ları enable ediyoruz.</p>
       
       <h3>🖼️ Asset Optimization ve Resource Management</h3>
-      <p>Image optimization techniques (WebP, AVIF formats, responsive images) ile visual content efficiently deliver ediyoruz. SVG optimization, icon systems ve sprite sheets ile graphics performance improve ediyoruz. Font loading strategies ve FOUT/FOIT prevention ile typography performance optimize ediyoruz.</p>
-      <p>CDN integration, cache headers ve compression techniques ile asset delivery optimize ediyoruz. Service workers ile offline capabilities ve background asset caching implement ediyoruz.</p>
+      <p>Image optimization technique'leri (WebP, AVIF format'ları, responsive image'lar) ile visual content'i efficiently deliver ediyoruz. SVG optimization, icon system'leri ve sprite sheet'leri ile graphics performance improve ediyoruz. Font loading strategy'leri ve FOUT/FOIT prevention ile typography performance optimize ediyoruz.</p>
+      <p>CDN integration, cache header'ları ve compression technique'leri ile asset delivery optimize ediyoruz. Service worker'ları ile offline capability'leri ve background asset caching implement ediyoruz.</p>
       
       <h3>🌐 Network Performance ve Data Fetching</h3>
-      <p>React Query, SWR ile intelligent data fetching ve caching strategies implement ediyoruz. Request deduplication, background updates ve stale-while-revalidate patterns ile optimal data synchronization sağlıyoruz. GraphQL federation ve query optimization ile API performance improve ediyoruz.</p>
-      <p>Prefetching strategies, request prioritization ve connection pooling ile network efficiency maximize ediyoruz. Error recovery patterns ve retry mechanisms ile resilient data fetching implement ediyoruz.</p>
+      <p>React Query, SWR ile intelligent data fetching ve caching strategy'leri implement ediyoruz. Request deduplication, background update'ler ve stale-while-revalidate pattern'ları ile optimal data synchronization sağlıyoruz. GraphQL federation ve query optimization ile API performance improve ediyoruz.</p>
+      <p>Prefetching strategy'leri, request prioritization ve connection pooling ile network efficiency maximize ediyoruz. Error recovery pattern'ları ve retry mechanism'ları ile resilient data fetching implement ediyoruz.</p>
       
-      <h3>🔧 Build Tool Optimizations</h3>
-      <p>Webpack optimizations (tree shaking, dead code elimination, module concatenation) ile bundle size minimize ediyoruz. Vite, esbuild gibi next-generation tools ile development ve build performance improve ediyoruz. Source map optimizations ve debugging configurations ile development experience enhance ediyoruz.</p>
+      <h3>🔧 Build Tool Optimization'ları</h3>
+      <p>Webpack optimization'ları (tree shaking, dead code elimination, module concatenation) ile bundle size minimize ediyoruz. Vite, esbuild gibi next-generation tool'ları ile development ve build performance improve ediyoruz. Source map optimization'ları ve debugging configuration'ları ile development experience enhance ediyoruz.</p>
       
       <h3>📱 Mobile Performance ve Progressive Enhancement</h3>
-      <p>Mobile-first performance strategies ve touch interactions optimize ediyoruz. Progressive Web App features ile native-like experiences oluşturuyoruz. Adaptive loading ve feature detection ile device capabilities'e göre optimization sağlıyoruz.</p>
+      <p>Mobile-first performance strategy'leri ve touch interaction'ları optimize ediyoruz. Progressive Web App feature'ları ile native-like experience'lar oluşturuyoruz. Adaptive loading ve feature detection ile device capability'lere göre optimization sağlıyoruz.</p>
       
       <h3>📊 Monitoring ve Continuous Optimization</h3>
-      <p>Real User Monitoring (RUM) ile production performance tracking implement ediyoruz. A/B testing ile performance improvements validate ediyoruz. Performance regression detection ve automated alerts ile continuous optimization maintain ediyoruz.</p>
+      <p>Real User Monitoring (RUM) ile production performance tracking implement ediyoruz. A/B testing ile performance improvement'ları validate ediyoruz. Performance regression detection ve automated alert'ler ile continuous optimization maintain ediyoruz.</p>
     `,
     author: "Yusuf Demirci",
     publishedAt: "2025-08-14",
@@ -219,6 +366,67 @@ const blogPosts = [
     ],
     image:
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80",
+  },
+  {
+    id: 5,
+    title:
+      "Frontend'den Yazılım Test Mühendisliğine: Kariyer Yolculuğum ve Öğrendiklerim",
+    slug: "frontend-den-test-muhendisligine-kariyer-yolculugu",
+    excerpt:
+      "Frontend geliştirici olarak başladığım kariyerimde yazılım test mühendisliğine geçiş sürecim, öğrendiklerim ve bu deneyimimin bana kattıkları.",
+    content: `
+      <h2>Yazılım dünyasında her gün yeni bir teknoloji, yeni bir trend ve yeni bir bakış açısı ortaya çıkıyor</h2>
+      <p>Bu hızlı değişim içinde kariyer yolculuğum da farklı rollerden geçerek şekillendi. Üniversite yıllarımda frontend geliştirici olarak başladığım bu yolculuk, bugün yazılım test mühendisi olarak devam ediyor.</p>
+
+      <h3>🎯 Frontend Dünyasına İlk Adımlarım</h3>
+      <p>Kariyerime ilk adımı attığımda, odak noktam kullanıcı arayüzü geliştirme idi. HTML, CSS ve JavaScript ile başladım. Zamanla React ve Next.js gibi modern frameworklerle çalıştım. Bu süreç bana şunları öğretti:</p>
+
+      <p><strong>Kullanıcı deneyiminin önemi:</strong> Bir web sitesinin görsel olarak şık olması kadar, hızlı ve erişilebilir olması da kritik.</p>
+
+      <p><strong>Kod okunabilirliği:</strong> Projelerde ekip çalışması için temiz ve sürdürülebilir kod yazmak şart.</p>
+
+      <p><strong>Responsive tasarım:</strong> Kullanıcıların farklı cihazlarda sorunsuz deneyim yaşaması temel bir gereklilik.</p>
+
+      <p>Frontend tecrübem bana sadece teknik bilgi kazandırmadı; aynı zamanda kullanıcı gözüyle düşünme becerisi kazandırdı.</p>
+
+      <h3>🚀 Yazılım Test Mühendisliğine Geçiş</h3>
+      <p>Frontend'de çalışırken fark ettim ki, geliştirdiğimiz özelliklerin sadece kodlanması değil, doğru çalışıp çalışmadığının garanti edilmesi de en az o kadar önemli. Bu farkındalık beni yazılım test mühendisliğine yönlendirdi.</p>
+
+      <p>Test mühendisliğine geçişimle birlikte yeni sorumluluklar üstlendim:</p>
+
+      <ul>
+        <li><strong>Manuel testler:</strong> Kullanıcı senaryolarını adım adım test etmek</li>
+        <li><strong>Otomasyon testleri:</strong> Selenium, TestNG, Cucumber, Appium gibi araçlarla süreçleri otomatize etmek</li>
+        <li><strong>API testleri:</strong> Backend fonksiyonlarının doğru çalıştığından emin olmak</li>
+        <li><strong>Test yaşam döngüsü:</strong> Gereksinim analizi, test senaryosu yazımı, hata raporlama ve regression süreçleri</li>
+      </ul>
+
+      <h3>💡 Frontend Tecrübesinin Test Mühendisliğine Katkısı</h3>
+      <p>Frontend geçmişim, test mühendisliği yolculuğumda büyük avantaj sağladı:</p>
+
+      <ol>
+        <li><strong>UI testlerinde kolaylık:</strong> Arayüz elementlerini tanımak ve doğru şekilde test etmek</li>
+        <li><strong>Geliştirici ile iletişim:</strong> Frontend teknolojilerini bildiğim için ekiple verimli iletişim</li>
+        <li><strong>Kullanıcı odaklı bakış açısı:</strong> Her testte "kullanıcı bu durumda ne görür?" diye düşünmek</li>
+      </ol>
+
+      <h3>📚 Öğrendiklerim ve Çıkarımlarım</h3>
+      <ul>
+        <li><strong>Kodlama bilgisi test mühendisliği için büyük artı</strong></li>
+        <li><strong>Test sadece hata bulmak değil, kaliteyi güvence altına almak</strong></li>
+        <li><strong>Takım çalışması olmazsa olmaz</strong></li>
+        <li><strong>Sürekli öğrenmek şart</strong></li>
+      </ul>
+
+      <p>Eğer sen de benzer bir kariyer yolculuğuna çıkmak istiyorsan, şunu unutma: Her rol birbirini besliyor. Bir alandaki tecrüben, diğerinde sana büyük avantaj sağlayabilir.</p>
+    `,
+    author: "Yusuf Demirci",
+    publishedAt: "2025-08-14",
+    readingTime: "8 min",
+    category: "Career",
+    tags: ["Career", "Personal", "Journey", "Testing", "Frontend"],
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
   },
 ];
 

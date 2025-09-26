@@ -2,7 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Code, TestTube, Laptop, Users, Trophy } from "lucide-react";
+import {
+  Code,
+  TestTube,
+  Laptop,
+  Trophy,
+  Calendar,
+  BookOpen,
+  Coffee,
+  Zap,
+} from "lucide-react";
 
 const skills = [
   {
@@ -56,10 +65,10 @@ const experiences = [
 ];
 
 const stats = [
-  { label: "Projeler Tamamlandı", value: "50+", icon: Trophy },
-  { label: "Test Senaryosu", value: "1000+", icon: TestTube },
-  { label: "Kod Satırı", value: "100K+", icon: Code },
-  { label: "Takım Üyeleri", value: "20+", icon: Users },
+  { label: "Deneyim Yılı", value: "3+", icon: Calendar },
+  { label: "Tamamlanan Proje", value: "15+", icon: Trophy },
+  { label: "Günlük Kahve", value: "4", icon: Coffee },
+  { label: "Öğrenme Hızı", value: "⚡", icon: Zap },
 ];
 
 export default function AboutPage() {
@@ -105,32 +114,89 @@ export default function AboutPage() {
           </motion.p>
         </motion.div>
 
-        {/* Stats Section */}
+        {/* Değerler ve İlkelerim */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          className="mb-16"
         >
-          {stats.map((stat) => (
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Çalışma Yaklaşımım
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Yazılım geliştirirken ve test ederken beni yönlendiren temel
+              değerler
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.div
-              key={stat.label}
-              variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="text-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg"
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl border border-blue-200/50 dark:border-blue-700/50"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-4">
-                <stat.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🎯</span>
               </div>
-              <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-600 dark:text-gray-300">
-                {stat.label}
-              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                Detay Odaklı
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Her kod satırını özenle hazırlıyorum
+              </p>
             </motion.div>
-          ))}
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-2xl border border-green-200/50 dark:border-green-700/50"
+            >
+              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🤝</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                Takım Çalışması
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                İş birliği ve bilgi paylaşımını önemsiyorum
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl border border-purple-200/50 dark:border-purple-700/50"
+            >
+              <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                Sürekli Öğrenme
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Teknoloji hızla değişiyor, ben de onunla birlikte gelişiyorum
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-2xl border border-orange-200/50 dark:border-orange-700/50"
+            >
+              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                İnovasyon
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Yeni çözümler ve yaklaşımlar keşfetmeyi seviyorum
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* About Content */}
