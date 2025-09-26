@@ -50,6 +50,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me",
   },
+  icons: {
+    icon: [
+      { url: "/images/yusuf-profile.jpeg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/images/yusuf-profile.jpeg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/images/yusuf-profile.jpeg", sizes: "48x48", type: "image/jpeg" },
+    ],
+    shortcut: "/images/yusuf-profile.jpeg",
+    apple: { url: "/images/yusuf-profile.jpeg", sizes: "180x180" },
+  },
 };
 
 export function generateViewport() {
@@ -67,6 +76,24 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <head>
+        <link
+          rel="icon"
+          type="image/jpeg"
+          sizes="16x16"
+          href="/images/yusuf-profile.jpeg"
+        />
+        <link
+          rel="icon"
+          type="image/jpeg"
+          sizes="32x32"
+          href="/images/yusuf-profile.jpeg"
+        />
+        <link rel="shortcut icon" href="/images/yusuf-profile.jpeg" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/images/yusuf-profile.jpeg"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
