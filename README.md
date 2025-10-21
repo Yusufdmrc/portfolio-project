@@ -104,10 +104,5 @@ src/
 
 Bu proje MIT lisansı altında lisanslanmıştır.
 
-## 📞 İletişim
-
-**Yusuf Demirci**
-
 - GitHub: [@Yusufdmrc](https://github.com/Yusufdmrc)
-- LinkedIn: [Profil Linki]
-- E-posta: [E-posta Adresiniz]
+
