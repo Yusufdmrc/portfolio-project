@@ -52,7 +52,7 @@ export default function Navigation() {
           <span className="brand-mark" aria-hidden="true">YD</span>
           <span className="brand-copy">
             <span>Yusuf Demirci</span>
-            <small>QA Engineer · Frontend</small>
+            <small>Yazılım mühendisi</small>
           </span>
         </Link>
 

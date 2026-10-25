@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="page-width footer-inner">
         <div className="footer-intro">
-          <span className="eyebrow">Yusuf Demirci · İstanbul</span>
+          <span className="eyebrow">Yazılım mühendisi · İstanbul</span>
           <p>İyi ürünlerin arkasında, detaylara dikkat eden insanlar vardır.</p>
         </div>
         <div className="footer-right">

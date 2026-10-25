@@ -2,16 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Download, Github, Linkedin, ScanLine } from "lucide-react";
 
-const focusAreas = ["Test otomasyonu", "Web & mobil", "Kullanıcı deneyimi"];
+const focusAreas = ["Web geliştirme", "Mobil uygulama geliştirme", "Test otomasyonu"];
 
 export default function HeroSection() {
   return (
     <section className="hero-section page-width" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <div className="eyebrow hero-eyebrow"><span className="status-dot" /> İstanbul, Türkiye <span className="eyebrow-divider">/</span> Yazılım kalite mühendisi</div>
-        <h1 id="hero-title">Yusuf<span className="hero-name-last">Demirci<span className="hero-period">.</span></span></h1>
-        <p className="hero-lede">İyi bir deneyim geliştirerek başlar. Güvenilirliğini test ederek kazanır.</p>
-        <p className="hero-description">Test otomasyonu ve kalite süreçlerinde çalışıyor; frontend geçmişimle ürünlere kullanıcı gözünden de bakıyorum.</p>
+        <div className="eyebrow hero-eyebrow"><span className="status-dot" /> İstanbul, Türkiye <span className="eyebrow-divider">/</span> Yazılım mühendisi</div>
+        <h1 id="hero-title">Yazılım<br />mühendisi<span className="hero-period">.</span></h1>
+        <p className="hero-name">Yusuf Demirci</p>
+        <p className="hero-lede">Web ve mobil uygulamalar geliştiriyorum; test otomasyonu projeleri üzerinde çalışıyorum.</p>
+        <p className="hero-description">Geliştirme ve kalite deneyimimi bir araya getirerek fikirleri çalışan, güvenilir yazılımlara dönüştürüyorum.</p>
         <div className="hero-actions">
           <Link href="/projects" className="button button-dark">Çalışmaları gör <ArrowUpRight size={17} /></Link>
           <a href="/YusufDemirci_CV.pdf" download className="button button-quiet"><Download size={16} /> Özgeçmiş</a>
@@ -28,7 +29,7 @@ export default function HeroSection() {
         <div className="portrait-frame">
           <Image src="/images/yusuf-profile.jpeg" alt="Yusuf Demirci" fill priority sizes="(max-width: 760px) 80vw, 420px" className="portrait-image" />
         </div>
-        <div className="portrait-caption"><span>Geliştirme + kalite</span><span>İstanbul, TR</span></div>
+        <div className="portrait-caption"><span>Yazılım mühendisi</span><span>İstanbul, TR</span></div>
         <div className="portrait-label"><ScanLine size={27} aria-hidden="true" /><div><strong>Detaylarda kalite.</strong><small>Koddan kullanıcı deneyimine</small></div></div>
       </div>
 

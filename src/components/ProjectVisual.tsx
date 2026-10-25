@@ -1,20 +1,20 @@
 import { ArrowRight, Braces, Code2, Layers, Monitor, Smartphone } from "lucide-react";
+import type { ProjectVisualKind } from "@/data/projects";
 
-type ProjectVisualProps = { category: string; title?: string };
+type ProjectVisualProps = { kind: ProjectVisualKind; title?: string };
 
 /** Editorial illustrations of project domains; these are not execution reports. */
-export default function ProjectVisual({ category, title = "Web deneyimi" }: ProjectVisualProps) {
-  const kind = category === "Mobile Testing" ? "mobile" : category === "Test Automation" ? "test" : category === "API Testing" ? "api" : "web";
+export default function ProjectVisual({ kind, title = "Web projesi" }: ProjectVisualProps) {
   return (
     <div className={`project-visual visual-${kind}`} aria-hidden="true">
-      <div className="visual-caption"><span>{kind === "web" ? "ARAYÜZ / GELİŞTİRME" : kind === "mobile" ? "MOBİL / OTOMASYON" : kind === "api" ? "API / TEST" : "WEB / OTOMASYON"}</span><Code2 size={17} /></div>
+      <div className="visual-caption"><span>{kind === "web" ? "WEB GELİŞTİRME" : kind === "mobile" ? "MOBİL TEST OTOMASYONU" : kind === "api" ? "API TEST OTOMASYONU" : "WEB TEST OTOMASYONU"}</span><Code2 size={17} /></div>
       {kind === "web" ? (
         <div className="visual-window">
           <div className="visual-window-top"><i /><i /><i /></div>
-          <div className="visual-window-content"><div><strong>{title}</strong><span>Next.js · TypeScript</span></div><Layers size={34} strokeWidth={1.2} /></div>
+          <div className="visual-window-content"><strong>{title}</strong><Layers size={34} strokeWidth={1.2} /></div>
         </div>
       ) : kind === "mobile" ? (
-        <div className="visual-phone"><div className="visual-phone-device"><Smartphone size={27} strokeWidth={1.2} /></div><div className="visual-phone-copy">İki platform.<br />Ortak yaklaşım.<small>Android · iOS · Appium</small></div></div>
+        <div className="visual-phone"><div className="visual-phone-device"><Smartphone size={27} strokeWidth={1.2} /></div><div className="visual-phone-copy">Mobil kalite.<small>Appium · test otomasyonu</small></div></div>
       ) : (
         <div className="visual-flow"><div className="visual-node"><Braces size={25} strokeWidth={1.3} /><span>{kind === "api" ? "İstek" : "Senaryo"}</span></div><ArrowRight size={16} /><div className="visual-node"><Monitor size={25} strokeWidth={1.3} /><span>{kind === "api" ? "Yanıt" : "Tarayıcı"}</span></div><ArrowRight size={16} /><div className="visual-node"><ScanIcon /><span>Doğrulama</span></div></div>
       )}

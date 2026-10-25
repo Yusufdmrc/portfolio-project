@@ -33,9 +33,9 @@ components:
 
 ## Overview
 
-A personal engineering workbench: precise but human. The audience is Turkish-speaking collaborators and hiring teams evaluating Yusuf's frontend and quality-engineering work. The primary journey is introduction → projects → contact. Evidence: project.md, existing route content and the user's redesign request. This is a brand/content site, not an admin application.
+A personal engineering workbench: precise but human. The audience is Turkish-speaking collaborators and hiring teams evaluating Yusuf's software engineering across web development, mobile application development, and test automation. The primary journey is introduction → projects → contact. Evidence: project.md, existing route content, the user's supplied project links, and the user's positioning request. This is a brand/content site, not an admin application.
 
-The signature is a two-line name (charcoal in light mode, cobalt-tinted in dark mode) beside an arched real portrait, complemented by small project-domain diagrams. Diagrams are editorial illustrations, never fabricated execution results. Avoid generic terminal dashboards, invented metrics, cream/terracotta palettes and ornamental project numbering.
+The signature is a two-line software engineer title (charcoal in light mode, cobalt-tinted in dark mode) beside an arched real portrait, complemented by small project-domain diagrams. The project archive separates five web sites from three automation projects. Diagrams are editorial illustrations, never fabricated execution results or framework claims. Avoid generic terminal dashboards, invented metrics, cream/terracotta palettes and ornamental project numbering.
 
 Runtime ownership: src/app/globals.css is canonical. The frontmatter mirrors :root primary→--accent, background→--background, surface→--paper, text→--ink, muted→--muted, border→--line. Font variables --font-body and --font-display are provided by next/font in src/app/layout.tsx. Update this document and runtime together.
 

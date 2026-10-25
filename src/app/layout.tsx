@@ -8,11 +8,11 @@ const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-body" }
 const display = Space_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-display" });
 
 export const metadata: Metadata = {
-  title: "Yusuf Demirci - Software Test Engineer & Full-Stack Developer",
+  title: "Yusuf Demirci | Yazılım Mühendisi",
   description:
-    "Test otomasyonu, web geliştirme ve yazılım kalitesi konularında uzmanlaşmış yazılım mühendisi. Modern teknolojilerle kaliteli çözümler.",
+    "Yusuf Demirci; web ve mobil uygulama geliştirme ile test otomasyonu alanlarında çalışan yazılım mühendisi.",
   keywords:
-    "software test engineer, full-stack developer, test automation, web development, react, next.js, selenium, cypress, jest, typescript",
+    "yazılım mühendisi, web geliştirme, mobil uygulama geliştirme, test otomasyonu, React, Next.js, React Native, Selenium, Appium, Postman",
   authors: [{ name: "Yusuf Demirci" }],
   creator: "Yusuf Demirci",
   publisher: "Yusuf Demirci",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me"
   ),
   openGraph: {
-    title: "Yusuf Demirci - Software Test Engineer & Full-Stack Developer",
+    title: "Yusuf Demirci | Yazılım Mühendisi",
     description:
-      "Test otomasyonu, web geliştirme ve yazılım kalitesi konularında uzmanlaşmış yazılım mühendisi",
+      "Web ve mobil uygulama geliştirme ile test otomasyonu alanlarında çalışan yazılım mühendisi",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me",
     siteName: "Yusuf Demirci Portfolio",
     locale: "tr_TR",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yusuf Demirci - Software Test Engineer & Full-Stack Developer",
-    description: "Test otomasyonu ve web geliştirme uzmanı",
+    title: "Yusuf Demirci | Yazılım Mühendisi",
+    description: "Web ve mobil uygulama geliştirme, test otomasyonu",
     creator: "@yusufdemirci",
     images: ["/images/og-image.jpg"],
   },
@@ -105,7 +105,7 @@ export default function RootLayout({
               name: "Yusuf Demirci",
               url:
                 process.env.NEXT_PUBLIC_SITE_URL || "https://yusufdemircii.me",
-              jobTitle: "Software Test Engineer & Full-Stack Developer",
+              jobTitle: "Yazılım Mühendisi",
               worksFor: {
                 "@type": "Organization",
                 name: "Freelance",
@@ -113,6 +113,8 @@ export default function RootLayout({
               knowsAbout: [
                 "Software Testing",
                 "Test Automation",
+                "Web Development",
+                "Mobile Application Development",
                 "React",
                 "Next.js",
                 "TypeScript",
