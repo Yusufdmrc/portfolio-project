@@ -1,0 +1,48 @@
+
+> portfolio-project@0.1.0 build
+> next build
+
+ ⚠ Warning: Found multiple lockfiles. Selecting /Users/yusuf/package-lock.json.
+   Consider removing the lockfiles at:
+   * /Users/yusuf/software/cursor/portfolio-project/package-lock.json
+
+   ▲ Next.js 15.4.6
+   - Environments: .env.local, .env.production
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 1000ms
+   Linting and checking validity of types ...
+
+   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+   The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+   	- include was updated to add '.next-preview/types/**/*.ts'
+
+   Collecting page data ...
+   Generating static pages (0/11) ...
+   Generating static pages (2/11) 
+   Generating static pages (5/11) 
+   Generating static pages (8/11) 
+ ✓ Generating static pages (11/11)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      174 B         108 kB
+├ ○ /_not-found                            993 B         100 kB
+├ ○ /about                                 161 B         103 kB
+├ ○ /blog                                5.61 kB         114 kB
+├ ƒ /blog/[slug]                           173 B         108 kB
+├ ○ /contact                             50.4 kB         153 kB
+├ ○ /projects                            4.26 kB         107 kB
+├ ○ /robots.txt                            127 B        99.6 kB
+└ ○ /sitemap.xml                           127 B        99.6 kB
++ First Load JS shared by all            99.5 kB
+  ├ chunks/4bd1b696-2385f465b218746f.js  54.1 kB
+  ├ chunks/964-816cb07c2324a35a.js       43.4 kB
+  └ other shared chunks (total)          1.93 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

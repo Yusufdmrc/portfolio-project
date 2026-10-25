@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-body" });
+const display = Space_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-display" });
 
 export const metadata: Metadata = {
   title: "Yusuf Demirci - Software Test Engineer & Full-Stack Developer",
@@ -76,6 +77,7 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem("theme");document.documentElement.classList.toggle("dark",t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))}catch{}` }} />
         <link
           rel="icon"
           type="image/jpeg"
@@ -126,11 +128,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} antialiased min-h-screen transition-colors duration-300`}
+        className={`${inter.variable} ${display.variable} antialiased min-h-screen transition-colors duration-300`}
       >
         <div className="relative flex min-h-screen flex-col">
+          <a className="skip-link" href="#main">İçeriğe geç</a>
           <Navigation />
-          <main className="flex-1 pt-16">{children}</main>
+          <main className="flex-1" id="main">{children}</main>
           <Footer />
         </div>
       </body>

@@ -1,14 +1,4 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/Button";
-import {
-  Calendar,
-  Clock,
-  ArrowLeft,
-  Share2,
-  BookOpen,
-  User,
-  Tag,
-} from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Calendar, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -444,7 +434,6 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     notFound();
   }
 
-  // İlgili yazıları bul (aynı kategori veya tag'ler)
   const relatedPosts = blogPosts
     .filter(
       (otherPost) =>
@@ -455,134 +444,34 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     .slice(0, 2);
 
   return (
-    <div className="py-24 sm:py-32 min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-800 dark:to-indigo-900">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
-        {/* Back Button */}
-        <div className="mb-8">
-          <Link href="/blog">
-            <Button variant="ghost" size="sm" className="group">
-              <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Blog&apos;a Dön
-            </Button>
-          </Link>
-        </div>
+    <div className="site-page page-width article-page">
+      <Link href="/blog" className="text-link article-back"><ArrowLeft size={15} /> Tüm yazılara dön</Link>
+      <header className="page-heading article-heading">
+        <span className="eyebrow">{post.category} <span className="eyebrow-divider">/</span> Yusuf Demirci</span>
+        <h1>{post.title}<span className="hero-period">.</span></h1>
+        <p>{post.excerpt}</p>
+        <div className="article-kicker"><Calendar size={14} /><span>{new Date(post.publishedAt).toLocaleDateString("tr-TR")}</span><span>·</span><Clock size={14} /><span>{post.readingTime}</span></div>
+        <div className="project-tags article-tags">{post.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+      </header>
 
-        {/* Article Header */}
-        <header className="mb-12">
-          <div className="mb-6">
-            <Badge variant="secondary" className="mb-4">
-              {post.category}
-            </Badge>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
-              {post.title}
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              {post.excerpt}
-            </p>
-          </div>
-
-          {/* Article Meta */}
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700 pb-6">
-            <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
-              {post.author}
-            </div>
-            <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
-              {new Date(post.publishedAt).toLocaleDateString("tr-TR")}
-            </div>
-
-            <div className="flex items-center">
-              <BookOpen className="w-4 h-4 mr-2" />
-              {post.category}
-            </div>
-          </div>
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mt-6">
-            {post.tags.map((tag) => (
-              <Badge key={tag} variant="outline" className="text-xs">
-                <Tag className="w-3 h-3 mr-1" />
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </header>
-
-        {/* Article Image */}
-        <div className="mb-12 relative h-64 md:h-96 rounded-2xl overflow-hidden">
-          <Image
-            src={post.image}
-            alt={post.title}
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-        </div>
-
-        {/* Article Content */}
-        <article className="prose prose-lg dark:prose-invert max-w-none mb-12">
-          <div
-            className="text-gray-700 dark:text-gray-300 leading-relaxed [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:dark:text-white [&>h2]:mt-8 [&>h2]:mb-4 [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-gray-800 [&>h3]:dark:text-gray-200 [&>h3]:mt-6 [&>h3]:mb-3 [&>ul]:list-disc [&>ul]:ml-6 [&>ul]:space-y-2 [&>pre]:bg-gray-100 [&>pre]:dark:bg-gray-800 [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:overflow-x-auto [&>code]:bg-gray-100 [&>code]:dark:bg-gray-800 [&>code]:px-2 [&>code]:py-1 [&>code]:rounded"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-        </article>
-
-        {/* Share Section */}
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <div className="flex items-center justify-between">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Bu yazıyı beğendiniz mi?
-            </h4>
-            <Button variant="outline" size="sm" className="group">
-              <Share2 className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-              Paylaş
-            </Button>
-          </div>
-        </div>
-
-        {/* Related Posts */}
-        {relatedPosts.length > 0 && (
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-              İlgili Yazılar
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {relatedPosts.map((relatedPost) => (
-                <Link
-                  key={relatedPost.id}
-                  href={`/blog/${relatedPost.slug}`}
-                  className="group block p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
-                >
-                  <div>
-                    <Badge variant="secondary" className="mb-3 text-xs">
-                      {relatedPost.category}
-                    </Badge>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 line-clamp-2">
-                      {relatedPost.title}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 mb-4">
-                      {relatedPost.excerpt}
-                    </p>
-                    <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
-                      <div className="flex items-center">
-                        <Calendar className="w-3 h-3 mr-1" />
-                        {new Date(relatedPost.publishedAt).toLocaleDateString(
-                          "tr-TR"
-                        )}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-3 h-3 mr-1" />
-                        {relatedPost.readingTime}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
+      <div className="article-hero-image">
+        <Image src={post.image} alt={post.title} fill priority sizes="(max-width: 820px) 100vw, 820px" />
       </div>
+      <article className="article-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+
+      {relatedPosts.length > 0 && (
+        <section className="article-related" aria-labelledby="related-heading">
+          <span className="eyebrow">Okumaya devam et</span>
+          <h2 id="related-heading" className="content-heading">İlgili yazılar</h2>
+          {relatedPosts.map((relatedPost) => (
+            <Link key={relatedPost.id} href={`/blog/${relatedPost.slug}`}>
+              <span className="article-kicker">{relatedPost.category} <span>·</span> {relatedPost.readingTime}</span>
+              <h3>{relatedPost.title}</h3>
+              <span className="text-link">Yazıyı aç <ArrowUpRight size={14} /></span>
+            </Link>
+          ))}
+        </section>
+      )}
     </div>
   );
 }

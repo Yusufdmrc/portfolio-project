@@ -1,9 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/Button";
-import { Calendar, ArrowRight } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -187,7 +184,6 @@ const categories = [
   "Test Otomasyonu",
   "Programlama",
   "Career",
-  "API Testing",
 ];
 
 export default function BlogPage() {
@@ -198,186 +194,47 @@ export default function BlogPage() {
       ? blogPosts
       : blogPosts.filter((post) => post.category === selectedCategory);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
   return (
-    <div className="py-24 sm:py-32 min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-slate-800 dark:to-indigo-900">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto max-w-4xl text-center mb-16"
-        >
-          <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 dark:from-white dark:via-blue-200 dark:to-indigo-200 bg-clip-text text-transparent mb-6">
-            Blog
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-            Yazılım geliştirme, test otomasyonu ve teknoloji dünyasından
-            deneyimlerimi, öğrendiklerimi ve görüşlerimi paylaştığım alan.
-          </p>
-        </motion.div>
+    <div className="site-page page-width">
+      <header className="page-heading">
+        <span className="eyebrow">Notlar <span className="eyebrow-divider">/</span> Deneyimden kısa kayıtlar</span>
+        <h1>Yazılar<span className="hero-period">.</span></h1>
+        <p>Yazılım geliştirme, test otomasyonu ve kariyer yolculuğum boyunca öğrendiklerimi burada topluyorum.</p>
+      </header>
 
-        {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
-        >
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={category === selectedCategory ? "primary" : "outline"}
-              size="sm"
-              className="mb-2"
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </Button>
-          ))}
-        </motion.div>
-
-        {/* Featured Post */}
-        {filteredPosts.length > 1 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-16"
-          >
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white">
-              <Image
-                src={filteredPosts[0].image}
-                alt={filteredPosts[0].title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-indigo-600/90" />
-              <div className="relative z-10 max-w-4xl">
-                <Badge
-                  variant="secondary"
-                  className="mb-4 text-white bg-white/20"
-                >
-                  Öne Çıkan Yazı
-                </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  {filteredPosts[0].title}
-                </h2>
-                <p className="text-blue-100 text-lg leading-relaxed mb-6">
-                  {filteredPosts[0].excerpt}
-                </p>
-                <div className="flex items-center space-x-4 text-sm text-blue-200 mb-6">
-                  <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {new Date(filteredPosts[0].publishedAt).toLocaleDateString(
-                      "tr-TR"
-                    )}
-                  </div>
-                </div>
-                <Link href={`/blog/${filteredPosts[0].slug}`}>
-                  <Button variant="secondary" size="lg" className="group">
-                    Yazıyı Oku
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Blog Posts Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {(filteredPosts.length > 1
-            ? filteredPosts.slice(1)
-            : filteredPosts
-          ).map((post) => (
-            <motion.article
-              key={post.id}
-              variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-            >
-              {/* Post Image */}
-              <div className="h-48 relative overflow-hidden">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <Badge variant="secondary" className="text-xs">
-                    {post.category}
-                  </Badge>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
-                  <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-1" />
-                    {new Date(post.publishedAt).toLocaleDateString("tr-TR")}
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3 line-clamp-2">
-                  {post.title}
-                </h3>
-
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-1 mb-6">
-                  {post.tags.slice(0, 3).map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
-                  {post.tags.length > 3 && (
-                    <Badge variant="outline" className="text-xs">
-                      +{post.tags.length - 3}
-                    </Badge>
-                  )}
-                </div>
-
-                <Link href={`/blog/${post.slug}`}>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="group p-0 h-auto"
-                  >
-                    Devamını Oku
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
-            </motion.article>
-          ))}
-        </motion.div>
+      <div className="journal-filters" role="group" aria-label="Yazıları kategoriye göre filtrele">
+        {categories.map((category) => (
+          <button key={category} type="button" className={`filter-button${selectedCategory === category ? " is-selected" : ""}`} aria-pressed={selectedCategory === category} onClick={() => setSelectedCategory(category)}>{category}</button>
+        ))}
       </div>
+
+      {filteredPosts.length > 0 && (
+        <>
+          <Link className="journal-feature" href={`/blog/${filteredPosts[0].slug}`}>
+            <div className="journal-feature-art">
+              <Image src={filteredPosts[0].image} alt="" fill priority sizes="(max-width: 650px) 100vw, 55vw" />
+            </div>
+            <div className="journal-feature-copy">
+              <div className="article-kicker"><span>ÖNE ÇIKAN</span><span>{filteredPosts[0].category}</span></div>
+              <h2>{filteredPosts[0].title}</h2>
+              <p>{filteredPosts[0].excerpt}</p>
+              <div className="article-kicker"><Calendar size={14} /><span>{new Date(filteredPosts[0].publishedAt).toLocaleDateString("tr-TR")}</span></div>
+              <span className="text-link" style={{ marginTop: 19 }}>Yazıyı oku <ArrowUpRight size={16} /></span>
+            </div>
+          </Link>
+
+          <div className="journal-grid">
+            {filteredPosts.slice(1).map((post) => (
+              <Link className="journal-card" href={`/blog/${post.slug}`} key={post.id}>
+                <div className="article-kicker"><span>{post.category}</span><span>{new Date(post.publishedAt).toLocaleDateString("tr-TR")}</span></div>
+                <h2>{post.title}</h2>
+                <p>{post.excerpt}</p>
+                <div className="journal-card-bottom"><span>{post.tags.slice(0, 3).join(" · ")}</span><ArrowUpRight size={15} /></div>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }
