@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Download, Github, Linkedin, ScanLine } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download, Github, Linkedin } from "lucide-react";
 
 const focusAreas = ["Web geliştirme", "Mobil uygulama geliştirme", "Test otomasyonu"];
 
@@ -30,7 +30,6 @@ export default function HeroSection() {
           <Image src="/images/yusuf-profile.jpeg" alt="Yusuf Demirci" fill priority sizes="(max-width: 760px) 80vw, 420px" className="portrait-image" />
         </div>
         <div className="portrait-caption"><span>Yazılım mühendisi</span><span>İstanbul, TR</span></div>
-        <div className="portrait-label"><ScanLine size={27} aria-hidden="true" /><div><strong>Detaylarda kalite.</strong><small>Koddan kullanıcı deneyimine</small></div></div>
       </div>
 
       <div className="hero-bottomline">
